@@ -329,7 +329,7 @@ border: 5px solid #FFFFFF;
     font-size: 0.85rem;
     font-weight: 500;
     line-height: 1.7;
-    color: #333;
+     color: #8D8D8D;
     margin-bottom: 36px;
     text-transform: uppercase;
     letter-spacing: 0.03em;
@@ -348,6 +348,7 @@ border: 5px solid #FFFFFF;
     border-radius: 12.61px;
     text-decoration: none;
     transition: transform 0.2s, opacity 0.2s;
+   
 }
 
 .who-btn:hover {
@@ -362,23 +363,41 @@ border: 5px solid #FFFFFF;
     transform: translateY(-2px);
 }
 
-/* Arrow icon circle inside button */
+/* Arrow icon circle inside button - White circle with gradient arrow */
 .who-btn-icon {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #E6B554, #A16C16);
+    background: #FFFFFF;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-left: 12px;
+    transition: transform 0.2s ease;
 }
 
-.who-btn-icon svg {
-    width: 14px;
-    height: 14px;
-    fill: #fff;
+.who-btn:hover .who-btn-icon {
+    transform: translateX(4px);
 }
+
+/* SVG arrow styling */
+.who-btn-icon svg {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.who-btn-icon svg path {
+    stroke: url(#arrowGradient);
+    stroke-width: 2.52;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+
 
 /* ── Responsive ── */
 @media (max-width: 960px) {
