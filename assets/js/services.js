@@ -196,17 +196,6 @@ servicesTl.fromTo("#services .section-title", {
   duration: 2,
 }, 0);
 
-gsap.to(".animating-logo", {
-  x: -150,
-  rotate: -35,
-  scrollTrigger: {
-    trigger: "#services",
-    start: "top center",
-    end: "bottom bottom",
-    scrub: 1,
-  }
-});
-
 // ─────────────────────────────────────────
 // Footer
 // ─────────────────────────────────────────
@@ -270,3 +259,98 @@ lines.forEach((line, i) => {
     }, "<"); // "<" = runs at same time as the reveal above
   }
 });
+
+
+gsap.to(".animating-logo", {
+  opacity: 0,
+  duration: 1,
+  scrollTrigger: {
+    trigger: "#services",
+    start: "top bottom",
+    toggleActions: "play reverse play reverse",
+  }
+});
+
+// ─────────────────────────────────────────
+// Services Section — Image Stack Snap Reveal
+// ─────────────────────────────────────────
+
+gsap.set(".service-image-2, .service-image-3, .service-image-4, .service-image-5, .service-image-6", {
+  transformOrigin: "bottom center",
+});
+
+// Initial states
+gsap.set(".service-image-1", { opacity: 1,   rotate: 0,   yPercent: 0,    xPercent: 0,   filter: "blur(0px)",  zIndex: 1 });
+gsap.set(".service-image-2", { opacity: 0.1, rotate: -35, yPercent: -150, xPercent: -50, filter: "blur(12px)", zIndex: 2 });
+gsap.set(".service-image-3", { opacity: 0,   rotate: -35, yPercent: -150, xPercent: -50, filter: "blur(12px)", zIndex: 3 });
+gsap.set(".service-image-4", { opacity: 0,   rotate: -35, yPercent: -150, xPercent: -50, filter: "blur(12px)", zIndex: 4 });
+gsap.set(".service-image-5", { opacity: 0,   rotate: -35, yPercent: -150, xPercent: -50, filter: "blur(12px)", zIndex: 5 });
+gsap.set(".service-image-6", { opacity: 0,   rotate: -35, yPercent: -150, xPercent: -50, filter: "blur(12px)", zIndex: 6 });
+
+const imgSnapTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".services-section",
+    start: "top top",
+    end: "+=500%",            // 5 snaps × 100vh
+    scrub: 1,
+    pin: true,
+    anticipatePin: 1,
+    snap: {
+      snapTo: 1 / 5,          // snap to 0, 0.2, 0.4, 0.6, 0.8, 1
+      duration: { min: 0.2, max: 0.4 },
+      ease: "power2.inOut",
+    },
+  },
+});
+
+// ── Snap 1: image-1 exits, image-2 comes in, image-3 peeks ──
+imgSnapTl.to(".service-image-1", { opacity: 0, rotate: 35,  yPercent: 150,  xPercent: -50, filter: "blur(12px)", duration: 1 }, 0);
+imgSnapTl.to(".service-image-2", { opacity: 1, rotate: 0,   yPercent: 0,    xPercent: 0,   filter: "blur(0px)",  duration: 1 }, 0);
+imgSnapTl.to(".service-image-3", { opacity: 0.1, duration: 0.6 }, 0);
+
+// ── Snap 2: image-2 exits, image-3 comes in, image-4 peeks ──
+imgSnapTl.to(".service-image-2", { opacity: 0, rotate: 35,  yPercent: 150,  xPercent: -50, filter: "blur(12px)", duration: 1 }, 1);
+imgSnapTl.to(".service-image-3", { opacity: 1, rotate: 0,   yPercent: 0,    xPercent: 0,   filter: "blur(0px)",  duration: 1 }, 1);
+imgSnapTl.to(".service-image-4", { opacity: 0.1, duration: 0.6 }, 1);
+
+// ── Snap 3: image-3 exits, image-4 comes in, image-5 peeks ──
+imgSnapTl.to(".service-image-3", { opacity: 0, rotate: 35,  yPercent: 150,  xPercent: -50, filter: "blur(12px)", duration: 1 }, 2);
+imgSnapTl.to(".service-image-4", { opacity: 1, rotate: 0,   yPercent: 0,    xPercent: 0,   filter: "blur(0px)",  duration: 1 }, 2);
+imgSnapTl.to(".service-image-5", { opacity: 0.1, duration: 0.6 }, 2);
+
+// ── Snap 4: image-4 exits, image-5 comes in, image-6 peeks ──
+imgSnapTl.to(".service-image-4", { opacity: 0, rotate: 35,  yPercent: 150,  xPercent: -50, filter: "blur(12px)", duration: 1 }, 3);
+imgSnapTl.to(".service-image-5", { opacity: 1, rotate: 0,   yPercent: 0,    xPercent: 0,   filter: "blur(0px)",  duration: 1 }, 3);
+imgSnapTl.to(".service-image-6", { opacity: 0.1, duration: 0.6 }, 3);
+
+// ── Snap 5: image-5 exits, image-6 comes in ──
+imgSnapTl.to(".service-image-5", { opacity: 0, rotate: 35,  yPercent: 150,  xPercent: -50, filter: "blur(12px)", duration: 1 }, 4);
+imgSnapTl.to(".service-image-6", { opacity: 1, rotate: 0,   yPercent: 0,    xPercent: 0,   filter: "blur(0px)",  duration: 1 }, 4);
+
+// ── Text Initial States ──
+gsap.set(".service-title-1, .service-desc-1", { opacity: 1, yPercent: 0,  });
+gsap.set(".service-title-2, .service-desc-2", { opacity: 0, yPercent: -100,  });
+gsap.set(".service-title-3, .service-desc-3", { opacity: 0, yPercent: -100,  });
+gsap.set(".service-title-4, .service-desc-4", { opacity: 0, yPercent: -100,  });
+gsap.set(".service-title-5, .service-desc-5", { opacity: 0, yPercent: -100,  });
+gsap.set(".service-title-6, .service-desc-6", { opacity: 0, yPercent: -100,  });
+
+// ── Snap 1: title/desc 1 exits down, title/desc 2 comes in ──
+imgSnapTl.to(".service-title-1, .service-desc-1", { opacity: 0, yPercent: 100, duration: 1 }, 0);
+imgSnapTl.to(".service-title-2, .service-desc-2", { opacity: 1, yPercent: 0,   duration: 1 }, 0);
+
+// ── Snap 2: title/desc 2 exits down, title/desc 3 comes in ──
+imgSnapTl.to(".service-title-2, .service-desc-2", { opacity: 0, yPercent: 100, duration: 1 }, 1);
+imgSnapTl.to(".service-title-3, .service-desc-3", { opacity: 1, yPercent: 0,   duration: 1 }, 1);
+
+// ── Snap 3: title/desc 3 exits down, title/desc 4 comes in ──
+imgSnapTl.to(".service-title-3, .service-desc-3", { opacity: 0, yPercent: 100, duration: 1 }, 2);
+imgSnapTl.to(".service-title-4, .service-desc-4", { opacity: 1, yPercent: 0,  duration: 1 }, 2);
+
+// ── Snap 4: title/desc 4 exits down, title/desc 5 comes in ──
+imgSnapTl.to(".service-title-4, .service-desc-4", { opacity: 0, yPercent: 100, duration: 1 }, 3);
+imgSnapTl.to(".service-title-5, .service-desc-5", { opacity: 1, yPercent: 0,  duration: 1 }, 3);
+
+// ── Snap 5: title/desc 5 exits down, title/desc 6 comes in ──
+imgSnapTl.to(".service-title-5, .service-desc-5", { opacity: 0, yPercent: 100, duration: 1 }, 4);
+imgSnapTl.to(".service-title-6, .service-desc-6", { opacity: 1, yPercent: 0, duration: 1 }, 4);
