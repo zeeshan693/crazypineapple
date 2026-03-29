@@ -42,7 +42,7 @@
 
     <!-- Hero Section -->
 
-    <div class="hero-section">
+    <section class="hero-section">
         <div class="hero-image" style="background-image: url('assets/images/different-team.webp');">
             <div class="hero-content">
                 <h1>A Different Team <span class="hero-heading"> for Each Project</span></h1>
@@ -51,11 +51,11 @@
                     of project. Based in Quebec City, we coordinate everything from the heart of the business.</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Second Section -->
 
-    <div class="section second-section">
+    <section class="section second-section">
         <div class="project-content">
             <div class="projects-delivered card">
                 <h2>50+</h2>
@@ -70,23 +70,303 @@
                 <p>International Certifications</p>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Third section -->
 
-    <div class="section third-section" style="background-image: url('assets/images/site-logo-large.png');">
-        <div class="content">
-            <div class="who-we-are-image">
-                <img src="assets/images/who-we-are.webp" alt="who we are image">
+    <section class="who-section">
+        <div class="who-container">
+
+            <!-- LEFT: watermark logo + front photo -->
+            <div class="who-images">
+                <!-- Gold circular logo watermark (set your logo as background-image) -->
+                <div class="who-bg-image" style="background-image: url('assets/images/who-bg.png');"></div>
+                <!-- Front photo overlaid on the watermark -->
+                <img class="who-front-image" src="assets/images/who-we-are.webp"
+                    alt="Team collaborating on software project">
             </div>
-            <div class="who-we-are-content">
-                <h2>Who We Are</h2>
-                <p>Group Crazy Pineapple designs and develops custom technology solutions to automate and optimize your
+
+            <!-- RIGHT: heading, body text, CTA button -->
+            <div class="who-content">
+                <h2 class="who-heading">WHO WE ARE</h2>
+                <p class="who-text">
+                    Group Crazy Pineapple designs and develops custom technology solutions to automate and optimize your
                     operations. Our team integrates directly into your company to analyze your processes and deliver a
-                    product perfectly adapted to your operational reality.</p>
-                <p class="regular-partner">Regular partner of the Government of Canada.</p>
+                    product perfectly adapted to your operational reality.
+                </p>
+                <a href="#" class="who-btn">
+                    VIEW OUR SOFTWARE PROJECTS
+                    <!-- Arrow icon circle with white background and gradient arrow -->
+                    <span class="who-btn-icon">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#E6B554" />
+                                    <stop offset="100%" stop-color="#A16C16" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="url(#arrowGradient)" stroke-width="2.52"
+                                stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- fourth section -->
+
+    <section class="section fourth-section">
+        <div class="content">
+            <p class="gold-color">We don't sell software. We build YOUR solution</p>
+            <h2 class="heading">Our Approach</h2>
+            <div class="content-cards">
+                <div class="immersion-card card">
+                    <div class="card-icon">
+                        <img src="assets/icons/immersion.svg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Immersion</h3>
+                        <p class="card-paragraph">We enter your company to understand your operational reality.</p>
+                    </div>
+                </div>
+                <div class="analysis-card card">
+                    <div class="card-icon">
+                        <img src="assets/icons/analysis.svg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Analysis</h3>
+                        <p class="card-paragraph">We enter your company to understand your operational reality.</p>
+                    </div>
+                </div>
+                <div class="design-card card">
+                    <div class="card-icon">
+                        <img src="assets/icons/design.svg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Design</h3>
+                        <p class="card-paragraph">We enter your company to understand your operational reality.</p>
+                    </div>
+                </div>
+                <div class="Development-card card">
+                    <div class="card-icon">
+                        <img src="assets/icons/development.svg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>development</h3>
+                        <p class="card-paragraph">We enter your company to understand your operational reality.</p>
+                    </div>
+                </div>
+                <div class="Deployment-card card">
+                    <div class="card-icon">
+                        <img src="assets/icons/deployment.svg" alt="">
+                    </div>
+                    <div class="card-text">
+                        <h3>Deployment</h3>
+                        <p class="card-paragraph">We enter your company to understand your operational reality.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+
+    <!-- fift section -->
+    <section class="section fifth-section">
+        <div class="content">
+            <div class="text-content">
+                <h2 class="heading">Proven results,<br>stunning designs</h2>
+                <p class="paragraph>">Concrete solutions delivered across various industries: construction, real estate,
+                    agriculture, healthcare, transportation and more.</p>
+            </div>
+            <div class="card-layout">
+                <div class="cards">
+                    <div class="card-content">
+                        <img src="assets/images/buildar.webp" alt="buildar">
+                        <div class="card-text-content">
+                            <h3>Buildra</h3>
+                            <p>Construction project management platform with dashboard, task management, documents,
+                                analytical
+                                reports and field mobile applica.</p>
+                            <div class="buttons">
+                                <button>website</button>
+                                <button>development</button>
+                                <button>support</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <img src="assets/images/enerwise.webp" alt="enerwise">
+                        <div class="card-text-content">
+                            <h3>Enerwise</h3>
+                            <p>Energy management platform with global dashboard, maintenance alerts, compliance reports
+                            </p>
+                            <div class="buttons">
+                                <button>website</button>
+                                <button>development</button>
+                                <button>support</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-layout">
+                <div class="cards">
+                    <div class="card-content">
+                        <img src="assets/images/helvetia.webp" alt="">
+                        <div class="card-text-content">
+                            <h3>Helvetia Prime</h3>
+                            <p>Premium mobile and web application for financial services with elegant interface,
+                                analytical</p>
+                            <div class="buttons">
+                                <button>website</button>
+                                <button>development</button>
+                                <button>support</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <img src="assets/images/arcade.webp" alt="">
+                        <div class="card-text-content">
+                            <h3>Agriwise</h3>
+                            <p>Agricultural and viticultural management platform with dashboard, plot management, crop
+                                monitoring.</p>
+                            <div class="buttons">
+                                <button>website</button>
+                                <button>development</button>
+                                <button>support</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- sixth section: clients bar -->
+
+    <section class="clients-bar">
+        <div class="clients-inner">
+            <div class="client-logo"><img src="assets/images/company-logo-1.png" alt="company logo 1"></div>
+            <div class="client-logo"><img src="assets/images/company-logo-2.png" alt="company logo 2"></div>
+            <div class="client-logo"><img src="assets/images/company-logo-3.png" alt="company logo 3"></div>
+            <div class="client-logo"><img src="assets/images/company-logo-4.png" alt="company logo 4"></div>
+            <div class="client-logo"><img src="assets/images/company-logo-5.png" alt="company logo 5"></div>
+        </div>
+    </section>
+
+    <section class="footer-wrapper">
+        <div class="footer-content-container" style="background-image: url('assets/images/footer-bg.png');">
+            <!-- ── CTA DARK ── -->
+            <div class="cta-dark">
+                <h2>Let's <span style="color: #D7D7D7;">Connect With<br />CrazyPineapple</span></h2>
+                <p>Feel free to contact me if having any questions. I'm available for new projects or just for chatting.
+                </p>
+                <div class="cta-btns">
+                    <a href="#" class="btn-primary">
+                        Book Appointment
+                        <span class="btn-icon"><img src="assets/images/site-logo.png" alt="crazypineapple"></span>
+                    </a>
+                    <a href="#" class="btn-outline">
+                        Our Portfolio
+                        <span class="btn-icon" style="background:#fff; border:1.5px solid var(--text-primary);"><img
+                                src="assets/images/site-logo.png" alt="crazypineapple"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── FOOTER ── -->
+            <footer>
+                <div class="footer-top">
+                    <div class="footer-logo-wrap">
+                        <div class="logo"><img src="assets/images/site-logo.png" alt="crazypineapple logo"></div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Prices</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contact Us</h4>
+                        <div class="contact-line">
+                            <img src="assets/icons/envelope-icon.svg" alt="email icon">
+                            info@crazypineapple.com
+                        </div>
+                        <div class="contact-line">
+                            <img src="assets/icons/phone-icon.svg" alt="phone icon">
+                            +1 (438) 000-0000
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Service</h4>
+                        <ul>
+                            <li><a href="#">SEO &amp; Ranking</a></li>
+                            <li><a href="#">Website Design</a></li>
+                            <li><a href="#">Social Marketing</a></li>
+                            <li><a href="#">Private Consulting</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Get In Touch</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="#" class="social-icon">tw</a>
+                            <a href="#" class="social-icon">ig</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-regions">
+                    <h5>Services by Region — Québec</h5>
+                    <div class="region-tags">
+                        <a href="#" class="region-tag">Montréal</a>
+                        <a href="#" class="region-tag">Québec</a>
+                        <a href="#" class="region-tag">Laval</a>
+                        <a href="#" class="region-tag">Gatineau</a>
+                        <a href="#" class="region-tag">Longueuil</a>
+                        <a href="#" class="region-tag">Sherbrooke</a>
+                        <a href="#" class="region-tag">Saguenay</a>
+                        <a href="#" class="region-tag">Lévis</a>
+                        <a href="#" class="region-tag">Saint-Jérôme</a>
+                        <a href="#" class="region-tag">Trois-Rivières</a>
+                        <a href="#" class="region-tag">Saint John</a>
+                    </div>
+
+                    <h5>City Services — Canada</h5>
+                    <div class="region-tags">
+                        <a href="#" class="region-tag">Toronto</a>
+                        <a href="#" class="region-tag">Montréal</a>
+                        <a href="#" class="region-tag">Laval</a>
+                        <a href="#" class="region-tag">Calgary</a>
+                        <a href="#" class="region-tag">Edmonton</a>
+                        <a href="#" class="region-tag">Mississauga</a>
+                        <a href="#" class="region-tag">Brampton</a>
+                        <a href="#" class="region-tag">Hamilton</a>
+                        <a href="#" class="region-tag">Quebec City</a>
+                        <a href="#" class="region-tag">Winnipeg</a>
+                        <a href="#" class="region-tag">London ON</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>Privacy Policy</span>
+                    <span>Copyright © 2024 Crazy Pineapple Inc. All Rights Reserved.</span>
+                </div>
+            </footer>
+        </div>
+    </section>
+
 </body>
 
 </html>
