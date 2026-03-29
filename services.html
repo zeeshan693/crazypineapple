@@ -7,13 +7,16 @@
     <title>Services - Group Crazy Pineapple Inc</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="assets/css/services.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
 </head>
 
 <body>
 
     <div class="img-container" style="max-width: 1440px; margin: auto;">
         <img src="assets/images/site-logo-large.png" alt="site logo" class="animating-logo"
-        style="position: fixed; opacity: 0.2; left: 50%; transform: translateX(-50%); top: 20px; width: 45%;">
+            style="position: fixed; opacity: 0.2; left: 50%; transform: translateX(-50%); top: 20px; width: 45%;">
     </div>
 
     <!-- ── HERO SECTION ── -->
@@ -95,7 +98,8 @@
                         </div>
                     </h1>
 
-                    <p class="hero-sub">From intelligent automation to digital marketing, we create tailor-made solutions that propel your growth.</p>
+                    <p class="hero-sub">From intelligent automation to digital marketing, we create tailor-made
+                        solutions that propel your growth.</p>
 
                     <div class="hero-ctas">
                         <a href="#" class="btn-primary">
@@ -115,15 +119,20 @@
 
     <!-- ── WHO WE ARE ── -->
     <div class="section-full" id="who-we-are">
-        <div class="section-full-inner">
+        <div class="section-content-container">
             <div class="section-header" style="display: flex; flex-direction: column; ">
                 <div class="section-title">Who We Are</div>
-                <h2 class="section-desc">Group Crazy Pineapple designs and develops custom technology solutions to automate and optimize your operations. Our team integrates directly into your company to analyze your processes and deliver a product perfectly adapted to your operational reality.</h2>
+                <h2 class="section-desc">
+                    <span class="first-line line">Group Crazy Pineapple designs and develops custom technology solutions</span>
+                    <span class="second-line line">to automate and optimize your operations. Our team integrates directly</span>
+                    <span class="third-line line">into your company to analyze your processes and deliver a product</span>
+                    <span class="fourth-line line">perfectly adapted to your operational reality.</span>
+                </h2>
             </div>
         </div>
     </div>
 
-        <!-- ── OUR SERVICES ── -->
+    <!-- ── OUR SERVICES ── -->
     <div class="services-section" id="services">
         <div class="section-full-inner">
             <div class="section-header">
@@ -132,12 +141,24 @@
 
             <div class="services-list">
                 <div class="service-card">
-                    <h3 class="service-title">Automation</h3>
-                    <p class="service-desc">Automate your processes, reduce your operating costs and multiply your productivity with our customized AI solutions.</p>
+                    <div class="col col1">
+                        <div class="content">
+                            <h3 class="service-title">Automation <span>And Ai Personalized</span></h3>
+                            <p class="service-desc">Automate your processes, reduce your operating costs and multiply
+                                your
+                                productivity with our customized AI solutions.</p>
+                            <a href="#" class="service-link">Learn More
+                                <img src="assets/icons/readmore-icon.svg" alt="read more icon">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col col2">
+                        <img src="assets/images/service-1-image.webp" alt="Service 1">
+                    </div>
                 </div>
             </div>
 
-            
+
         </div>
     </div>
 
@@ -145,7 +166,7 @@
         <div class="footer-content-container" style="background-image: url('assets/images/footer-bg.png');">
             <!-- ── CTA DARK ── -->
             <div class="cta-dark">
-                <h2>Let's <span style="color: #D7D7D7;">Connect With<br />CrazyPineapple</span></h2>
+                <h2>Ready to Transform <br> Your Business?</h2>
                 <p>Feel free to contact me if having any questions. I'm available for new projects or just for chatting.
                 </p>
                 <div class="cta-btns">
@@ -252,6 +273,7 @@
         </div>
     </div>
 
+    <script src="assets/js/services.js"></script>
 </body>
 
 </html>
