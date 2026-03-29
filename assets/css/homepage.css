@@ -501,6 +501,7 @@ body {
     transition: all .25s;
     cursor: pointer;
     box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.09);
+    width: 33%;
 }
 
 .service-card:hover {
