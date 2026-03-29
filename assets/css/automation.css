@@ -266,38 +266,130 @@ body {
 ****************
 ******************/
 
-.project-content {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-    justify-content: center;
-    align-items: center;
-}
 
-.project-content .card {
-    width: 290px;
-    height: 100px;
+.deliver-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 24px;
-    border-right: 2px solid #E5E5E5;
+    align-items: center;
+    gap: 60px;
+}
+
+.deliver-content .heading-para {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.card h2 {
+.heading-para h2 {
     font-family: var(--secondary-font);
-    font-size: 58px;
+    font-size: 48px;
+    text-transform: uppercase;
     font-weight: 400;
+    color: var(--text-color-primary);
+    line-height: 124%;
 }
 
-.card p {
-    font-family: var(--primary-font);
-    font-size: 14px;
-    text-transform: uppercase;
-    color: var(--text-secondary);
+.heading-para h2 .deliver {
+    background: var(--golden-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    padding: 0 8px;
+    border-radius: 4px;
 }
+
+.heading-para p{
+    font-size: 18px;
+    font-family: var(--primary-font);
+}
+
+.six-cards-circle{
+    width: 60%;
+    position: relative;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.six-cards-circle img {
+    width: 80%;
+    height: auto;
+}
+
+.six-cards-circle .card {
+    width: 240px;
+    height: 190px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+    padding: 24px;
+    border: 1.64px solid #DEDEDE;
+    border-radius: 18px;
+    box-shadow: 0 0 41.03px rgb(0 0 0 / 13%);
+}
+
+.six-cards-circle .card img{
+    width: 50% !important;
+}
+
+.six-cards-circle .card p{
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--text-color-primary);
+    text-transform: uppercase;
+}
+
+.automation-card{
+    position: absolute;
+    top: 20px;
+}
+
+.integration-card{
+    position: absolute;
+    top: 230px;
+    right: 0;
+    margin-right: -130px;
+    transform: rotate(20deg)
+}
+
+.productivity-card{
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    margin-right: -100px;
+    transform: rotate(-20deg)
+}
+
+.workflows-card{
+    position: absolute;
+    bottom: 14px;
+}
+
+.reduction-card{
+    position: absolute;
+    bottom: 140px;
+    left: 0;
+    margin-left: -100px;
+    transform: rotate(20deg)
+}
+
+.repetitive-card{
+    position: absolute;
+    top: 230px;
+    left: 0;
+    margin-left: -130px;
+    transform: rotate(-20deg)
+}
+
 
 
 /**************
@@ -306,321 +398,9 @@ body {
 ****************
 ******************/
 
-.who-section {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 80px 40px;
-    background: #fff;
-    overflow: hidden;
-}
 
-.who-section .who-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
 
-.who-section .who-images {
-    flex: 0 0 50%;
-    position: relative;
-    min-height: 340px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.who-section .who-bg-image {
-    position: absolute;
-    top: -40%;
-    bottom: 2%;
-    left: -145px;
-    transform: rotate(30deg);
-    margin-bottom: 500px;
-    width: 520px;
-    height: 620px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 1;
-    opacity: 1;
-}
-
-.who-section .who-front-image {
-    position: relative;
-    z-index: 2;
-    width: 80%;
-}
-
-.who-section .who-content {
-    font-family: 'Bebas Neue';
-    flex: 1;
-    text-transform: uppercase;
-    min-width: 280px;
-}
-
-.who-section .who-heading {
-    font-family: 'Bebas Neue', 'Impact', sans-serif;
-    font-size: clamp(3rem, 6vw, 5rem);
-    font-weight: 400;
-    letter-spacing: 3px;
-    color: #111;
-    margin-bottom: 20px;
-    text-align: left;
-    line-height: 1;
-}
-
-.who-section .who-text {
-    font-family: 'Poppins', 'Helvetica Neue', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 500;
-    line-height: 1.7;
-    color: #8D8D8D;
-    margin-bottom: 36px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-}
-
-.who-section .who-btn {
-    display: inline-block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #fff;
-    background: linear-gradient(90deg, #E6B554, #A16C16);
-    padding: 14px 36px;
-    border-radius: 12.61px;
-    text-decoration: none;
-    transition: transform 0.2s, opacity 0.2s;
-}
-
-.who-section .who-btn-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #FFFFFF;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    margin-left: 12px;
-    transition: transform 0.2s ease;
-}
-
-.who-section .who-btn-icon svg {
-    width: 16px;
-    height: 16px;
-    display: block;
-}
-
-/**************
-*****************
-*************** fourth-section ── 
-****************
-******************/
-
-.fourth-section {
-    background-color: #181819 !important;
-}
-
-.fourth-section .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.fourth-section .content .gold-color {
-    font-family: var(--secondary-font);
-    font-size: 22px;
-    background: var(--golden-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.fourth-section .content h2 {
-    font-family: var(--secondary-font);
-    font-size: 48px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: white;
-}
-
-.fourth-section .content-cards {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-}
-
-.fourth-section .content-cards .card {
-    /* width: 290px; */
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    text-align: center;
-}
-
-.fourth-section .card .card-icon {
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 24px;
-}
-
-.fourth-section .card-icon img {
-    width: 46px;
-}
-
-.fourth-section .card .card-text {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.fourth-section .card p {
-    font-size: 8px;
-    font-family: var(--primary-font);
-    line-height: 14px;
-    font-weight: 500;
-}
-
-.fourth-section .content-cards h3,
-.card-paragraph {
-    color: white !important;
-}
-
-/**************
-*****************
-*************** fifth-section ── 
-****************
-******************/
-
-.fifth-section .content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 48px;
-}
-
-.fifth-section .content .text-content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 60px;
-    gap: 12px;
-}
-
-.fifth-section .text-content h2 {
-    font-family: var(--secondary-font);
-    font-size: 48px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--text-primary);
-}
-
-.fifth-section .text-content p {
-    width: 40%;
-    font-family: var(--primary-font);
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--text-secondary) !important;
-}
-
-.fifth-section .content .cards {
-    display: flex;
-    flex-direction: row;
-    gap: 48px;
-}
-
-.fifth-section .content .cards .card-text-content {
-    display: flex;
-    padding-left: 22px;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.fifth-section .card-text-content h3 {
-    font-family: var(--secondary-font);
-    font-size: 38px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--text-primary);
-}
-
-.fifth-section .card-text-content p {
-    width: 80%;
-    font-family: var(--primary-font);
-    font-size: 12px;
-    line-height: 20px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--text-secondary) !important;
-}
-
-.fifth-section .card-text-content .buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
-}
-
-.fifth-section .buttons button {
-    padding: 8px 22px;
-    background-color: transparent;
-    border: 1px solid #BCBCBC;
-    border-radius: 50px;
-    color: #BCBCBC;
-    cursor: pointer;
-}
-
-/**************
-*****************
-*************** sixth-section ── 
-****************
-******************/
-
-.clients-bar {
-    padding: 40px 60px;
-}
-
-.clients-inner {
-    max-width: 1280px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 27px;
-    flex-wrap: wrap;
-}
-
-.client-logo {
-    width: 165px;
-    height: auto;
-    background: var(--gray-bg);
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--text-secondary);
-    transition: filter .2s;
-}
 
 /**************
 *****************
@@ -832,6 +612,4 @@ footer {
     letter-spacing: 0.04em;
 }
 
-@media screen and (max-width: 425px) {
-    
-}
+@media screen and (max-width: 425px) {}
