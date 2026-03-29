@@ -590,7 +590,7 @@ gsap.fromTo(".clients-bar .clients-inner .client-logo", {
   scrollTrigger: {
     trigger: ".clients-bar",
     start: "top 80%",
-    end: "+=100%",
+    end: "+=50%",
     toggleActions: "play none none reverse",
   }
 });
@@ -598,15 +598,16 @@ gsap.fromTo(".clients-bar .clients-inner .client-logo", {
 // Site Footer
 
 gsap.fromTo(".footer-wrapper", {
-  yPercent: 50,
+  yPercent: 30,
 }, {
   yPercent: 0,
   duration: 1,
   scrollTrigger: {
     trigger: ".footer-wrapper",
-    start: "top 80%",
+    start: "top 90%",
     end: "+=100%",
     toggleActions: "play none none reverse",
+    // markers: true,
   }
 });
 
