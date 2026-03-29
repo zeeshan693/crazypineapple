@@ -219,7 +219,7 @@ body {
 .hero-section .hero-image {
     width: 98%;
     height: 100%;
-    /* background-size: cover; */
+    background-size: cover;
     background-position: center;
     border-radius: 20px;
     display: flex;
@@ -513,12 +513,12 @@ body {
 }
 
 .fifth-section .content .text-content {
-    width: 100%;
+    width: 1240px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 60px;
+    /* padding: 0 60px; */
     gap: 12px;
 }
 
