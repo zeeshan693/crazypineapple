@@ -261,13 +261,15 @@ lines.forEach((line, i) => {
 });
 
 
-gsap.to(".animating-logo", {
+gsap.fromTo(".animating-logo", {
+  opacity: 0.2,
+}, {
   opacity: 0,
   duration: 1,
   scrollTrigger: {
     trigger: "#services",
     start: "top bottom",
-    toggleActions: "play reverse play reverse",
+    toggleActions: "play none none reverse",
   }
 });
 
