@@ -1452,3 +1452,367 @@ footer {
         font-size: 0.6rem;
     }
 }
+
+/* ============================================================
+   CONTACT-US RESPONSIVE STYLES
+   Breakpoints: 360, 390, 410, 430 (mobile portrait),
+                768 landscape, tablet portrait (769–1024),
+                tablet landscape (1025–1200)
+   Link AFTER Contact-Us.css to override defaults.
+   ============================================================ */
+
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET LANDSCAPE  (1025px – 1200px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  /* Header */
+  .site-header {
+    width: 90%;
+    height: 76px;
+  }
+  .nav-links { gap: 24px; padding: 0 20px; }
+  .nav-links a { font-size: 0.95rem; }
+  .contact-link { font-size: 0.95rem; }
+
+  /* Hero */
+  .contact-hero { padding-top: 96px; }
+  .contact-hero-overlay { min-height: 280px; }
+  .contact-hero-content h1 { font-size: 44px; }
+
+  /* Contact section */
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    padding: 60px 40px;
+  }
+  .contact-info h1 { font-size: 54px; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 160px 1fr 1fr 1fr 1fr; gap: 28px; }
+  .cta-dark h2 { font-size: clamp(2.8rem, 5.5vw, 5.5rem); }
+  .cta-dark p { max-width: 60%; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET PORTRAIT  (769px – 1024px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /* Header */
+  .site-header {
+    width: 92%;
+    height: 72px;
+  }
+  .logo-zone .logo { width: 56px; }
+  .nav-links { gap: 18px; padding: 0 16px; }
+  .nav-links a { font-size: 0.85rem; letter-spacing: 0.07em; }
+  .header-right { gap: 12px; padding: 0 16px; }
+  .contact-link { font-size: 0.85rem; }
+
+  /* Hero */
+  .contact-hero { padding-top: 90px; }
+  .contact-hero-bg { margin-left: 8px; margin-right: 8px; }
+  .contact-hero-overlay { min-height: 240px; padding: 28px 24px; }
+  .contact-hero-content h1 { font-size: 38px; }
+  .contact-hero-content p { font-size: 12px; }
+
+  /* Contact section */
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+    padding: 50px 32px;
+  }
+  .contact-info { justify-content: flex-start; }
+  .contact-info h1 { font-size: 48px; margin-bottom: 28px; }
+  .label-tag { font-size: 12px; }
+  .info-item { gap: 14px; margin-bottom: 22px; }
+  .icon-circle { width: 42px; height: 42px; }
+  .icon-circle svg { width: 18px; height: 18px; }
+  .info-text strong { font-size: 13px; }
+  .info-text span { font-size: 11px; }
+  .form-field { padding: 13px 0; }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 11px; letter-spacing: 1.5px; }
+  .form-field textarea { height: 54px; }
+  .submit-btn { padding: 12px 30px; font-size: 11px; margin-top: 24px; }
+
+  /* Footer */
+  .footer-content-container { border-radius: 48px; }
+  .cta-dark { padding: 70px 40px 36px; }
+  .cta-dark h2 { font-size: clamp(2.2rem, 5.5vw, 4.5rem); }
+  .cta-dark p { max-width: 72%; font-size: 0.95rem; }
+  .cta-btns { flex-direction: row; gap: 12px; }
+  footer { padding: 48px 36px 24px; }
+  .footer-top { grid-template-columns: 140px 1fr 1fr 1fr; gap: 24px; }
+  .footer-top .footer-col:last-child { grid-column: 2 / 3; }
+  .region-tag { padding: 6px 20px; font-size: 0.76rem; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   SHARED MOBILE BASE  (≤ 430px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 430px) {
+
+  /* Header */
+  .site-header {
+    width: 94%;
+    height: 60px;
+    margin-top: 8px;
+    border-radius: 100px;
+  }
+  .logo-zone { padding: 0 10px 0 12px; }
+  .logo-zone .logo { width: 44px; }
+  .nav-links { display: none; }
+  .header-right { gap: 10px; padding: 0 12px 0 0; margin-left: auto; }
+  .contact-link { font-size: 0.72rem; letter-spacing: 0.07em; gap: 4px; }
+  .divider { height: 22px; }
+  .hamburger span:nth-child(1) { width: 22px; }
+  .hamburger span:nth-child(2) { width: 16px; }
+
+  /* Hero */
+  .contact-hero { padding-top: 76px; }
+  .contact-hero-bg { margin-left: 6px; margin-right: 6px; border-radius: 16px; }
+  .contact-hero-overlay { min-height: 180px; padding: 20px 16px; }
+  .contact-hero-content h1 { font-size: 26px; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .contact-hero-content p { font-size: 9.5px; letter-spacing: 0.5px; line-height: 1.6; margin: 2px 0; }
+
+  /* Contact section */
+  .contact-section {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 36px 16px;
+  }
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+  .label-tag { font-size: 11px; letter-spacing: 1.5px; }
+  .contact-info h1 { font-size: 38px; margin-bottom: 26px; }
+  .info-item { justify-content: flex-start; gap: 14px; margin-bottom: 20px; }
+  .icon-circle { width: 40px; height: 40px; flex-shrink: 0; }
+  .icon-circle svg { width: 16px; height: 16px; }
+  .info-text { text-align: left; }
+  .info-text strong { font-size: 12px; }
+  .info-text span { font-size: 10.5px; }
+  .form-field { padding: 12px 0; }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 11px; letter-spacing: 1.2px; }
+  .form-field textarea { height: 52px; }
+  .submit-btn {
+    align-self: center;
+    padding: 11px 30px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    margin-top: 26px;
+  }
+
+  /* Footer */
+  .footer-wrapper { padding: 0 8px 8px; }
+  .footer-content-container { border-radius: 24px; }
+  .cta-dark { padding: 44px 18px 28px; }
+  .cta-dark h2 { font-size: clamp(1.8rem, 9vw, 2.6rem); line-height: 1.1; margin-bottom: 14px; }
+  .cta-dark p { max-width: 100%; font-size: 0.78rem; margin-bottom: 22px; line-height: 1.6; }
+  .cta-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    width: 100%;
+    max-width: 270px;
+    justify-content: space-between;
+    padding: 9px 10px 9px 22px;
+    font-size: 0.74rem;
+  }
+  .cta-btns .btn-icon { width: 34px; height: 34px; }
+  footer { padding: 32px 16px 16px; }
+  .footer-top { grid-template-columns: 1fr; gap: 26px; text-align: center; }
+  .footer-logo-wrap { display: flex; justify-content: center; }
+  .footer-col h4 { margin-bottom: 10px; font-size: 0.82rem; }
+  .footer-col ul { gap: 8px; }
+  .footer-col ul li a { font-size: 0.82rem; }
+  .contact-line { justify-content: center; font-size: 0.8rem; }
+  .social-icons { justify-content: center; }
+  .footer-regions { padding-top: 18px; }
+  .footer-regions h5 { font-size: 0.78rem; text-align: center; margin-bottom: 10px; }
+  .region-tags { justify-content: center; gap: 6px; margin-bottom: 16px; }
+  .region-tag { padding: 5px 14px; font-size: 0.66rem; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; margin-top: 14px; padding-top: 14px; }
+  .footer-bottom span { font-size: 0.68rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   430px — iPhone 14 Plus / 15 Plus  (fine-tune on base)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 411px) and (max-width: 430px) {
+  .contact-hero-overlay { min-height: 190px; }
+  .contact-hero-content h1 { font-size: 27px; }
+  .contact-info h1 { font-size: 40px; }
+  .cta-dark h2 { font-size: 2.1rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   410px — Pixel 7 / Galaxy S23
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 410px) {
+  .site-header { width: 96%; height: 58px; }
+  .contact-hero-overlay { min-height: 176px; }
+  .contact-hero-content h1 { font-size: 25px; }
+  .contact-hero-content p { font-size: 9px; }
+  .contact-info h1 { font-size: 36px; }
+  .icon-circle { width: 38px; height: 38px; }
+  .icon-circle svg { width: 15px; height: 15px; }
+  .info-text strong { font-size: 11.5px; }
+  .info-text span { font-size: 10px; }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 10px; letter-spacing: 1px; }
+  .submit-btn { padding: 10px 26px; font-size: 10px; }
+  .cta-dark h2 { font-size: 1.9rem; }
+  .region-tag { padding: 4px 12px; font-size: 0.62rem; }
+  .footer-bottom span { font-size: 0.64rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   390px — iPhone 14 / 15 Pro
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 390px) {
+  .logo-zone .logo { width: 40px; }
+  .contact-link { font-size: 0.68rem; }
+  .contact-hero-overlay { min-height: 168px; }
+  .contact-hero-content h1 { font-size: 23px; }
+  .contact-hero-content p { font-size: 8.5px; }
+  .contact-section { padding: 30px 14px; gap: 30px; }
+  .contact-info h1 { font-size: 33px; margin-bottom: 22px; }
+  .info-item { gap: 12px; margin-bottom: 18px; }
+  .icon-circle { width: 36px; height: 36px; }
+  .icon-circle svg { width: 14px; height: 14px; }
+  .info-text strong { font-size: 11px; }
+  .info-text span { font-size: 9.5px; }
+  .form-field { padding: 10px 0; }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 9.5px; }
+  .form-field textarea { height: 48px; }
+  .submit-btn { padding: 9px 22px; font-size: 9.5px; margin-top: 22px; }
+  .cta-dark { padding: 38px 14px 22px; }
+  .cta-dark h2 { font-size: 1.75rem; }
+  .cta-dark p { font-size: 0.72rem; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { max-width: 250px; font-size: 0.68rem; padding: 8px 8px 8px 18px; }
+  .cta-btns .btn-icon { width: 30px; height: 30px; }
+  footer { padding: 26px 14px 14px; }
+  .footer-top { gap: 22px; }
+  .region-tag { padding: 4px 10px; font-size: 0.58rem; }
+  .footer-bottom span { font-size: 0.6rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   360px — Galaxy A series / smallest phones
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 360px) {
+  .site-header { width: 98%; height: 54px; }
+  .logo-zone .logo { width: 36px; }
+  .contact-link { font-size: 0.62rem; }
+  .hamburger span:nth-child(1) { width: 20px; }
+  .hamburger span:nth-child(2) { width: 14px; }
+  .contact-hero { padding-top: 68px; }
+  .contact-hero-bg { margin-left: 4px; margin-right: 4px; border-radius: 12px; }
+  .contact-hero-overlay { min-height: 156px; }
+  .contact-hero-content h1 { font-size: 21px; }
+  .contact-hero-content p { font-size: 7.5px; }
+  .contact-section { padding: 26px 12px; gap: 26px; }
+  .contact-info h1 { font-size: 29px; margin-bottom: 18px; }
+  .label-tag { font-size: 10px; }
+  .info-item { gap: 10px; margin-bottom: 16px; }
+  .icon-circle { width: 32px; height: 32px; }
+  .icon-circle svg { width: 13px; height: 13px; }
+  .info-text strong { font-size: 10.5px; }
+  .info-text span { font-size: 9px; }
+  .form-field { padding: 9px 0; }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 8.5px; letter-spacing: 0.8px; }
+  .form-field textarea { height: 44px; }
+  .submit-btn { padding: 8px 18px; font-size: 8.5px; letter-spacing: 1px; margin-top: 18px; }
+  .footer-content-container { border-radius: 18px; }
+  .cta-dark { padding: 32px 12px 18px; }
+  .cta-dark h2 { font-size: 1.55rem; }
+  .cta-dark p { font-size: 0.66rem; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { max-width: 230px; font-size: 0.62rem; padding: 7px 7px 7px 14px; }
+  .cta-btns .btn-icon { width: 28px; height: 28px; }
+  footer { padding: 22px 12px 12px; }
+  .footer-col h4 { font-size: 0.75rem; }
+  .footer-col ul li a { font-size: 0.75rem; }
+  .contact-line { font-size: 0.72rem; }
+  .region-tag { padding: 3px 8px; font-size: 0.54rem; }
+  .footer-bottom span { font-size: 0.54rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   MOBILE LANDSCAPE  (rotated phone, height ≤ 500px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 500px) {
+
+  /* Header */
+  .site-header { height: 54px; width: 94%; }
+  .logo-zone .logo { width: 40px; }
+  .nav-links { display: flex; gap: 14px; padding: 0 10px; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; }
+  .header-right { gap: 8px; padding: 0 12px 0 0; }
+  .contact-link { font-size: 0.7rem; }
+  .divider { height: 20px; }
+
+  /* Hero */
+  .contact-hero { padding-top: 64px; }
+  .contact-hero-bg { margin-left: 6px; margin-right: 6px; border-radius: 14px; }
+  .contact-hero-overlay { min-height: 180px; padding: 18px 20px; }
+  .contact-hero-content h1 { font-size: 28px; }
+  .contact-hero-content p { font-size: 10px; }
+
+  /* Contact section — side by side in landscape */
+  .contact-section {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    padding: 36px 24px;
+  }
+  .contact-info { text-align: left; align-items: flex-start; }
+  .contact-info h1 { font-size: 36px; margin-bottom: 20px; }
+  .info-item { margin-bottom: 16px; gap: 12px; }
+  .icon-circle { width: 36px; height: 36px; }
+  .icon-circle svg { width: 14px; height: 14px; }
+  .info-text strong { font-size: 11px; }
+  .info-text span { font-size: 9.5px; }
+  .form-field { padding: 10px 0; }
+  .form-field input,
+  .form-field textarea,
+  .form-field select { font-size: 10px; letter-spacing: 1px; }
+  .form-field textarea { height: 44px; }
+  .submit-btn { padding: 9px 22px; font-size: 10px; margin-top: 18px; }
+
+  /* Footer */
+  .footer-content-container { border-radius: 28px; }
+  .cta-dark { padding: 36px 24px 24px; }
+  .cta-dark h2 { font-size: 1.9rem; }
+  .cta-dark p { max-width: 80%; font-size: 0.76rem; margin-bottom: 18px; }
+  .cta-btns { flex-direction: row; gap: 8px; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { font-size: 0.7rem; padding: 7px 10px 7px 18px; }
+  .cta-btns .btn-icon { width: 30px; height: 30px; }
+  footer { padding: 28px 22px 16px; }
+  .footer-top { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .footer-logo-wrap { grid-column: 1 / -1; display: flex; }
+  .region-tag { padding: 4px 12px; font-size: 0.64rem; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+  .footer-bottom span { font-size: 0.64rem; }
+}

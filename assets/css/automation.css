@@ -612,4 +612,779 @@ footer {
     letter-spacing: 0.04em;
 }
 
-@media screen and (max-width: 425px) {}
+/* ============================================================
+   RESPONSIVE STYLES — automation.css additions
+   Breakpoints: 360, 390, 410, 430 (mobile portrait),
+                768 (mobile landscape), tablet portrait (768–1024),
+                tablet landscape (1024–1200)
+   ============================================================ */
+
+/* ──────────────────────────────────────────────────────────────
+   SHARED MOBILE BASE  (≤ 430px — all small phones)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 430px) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 92%;
+    height: 64px;
+    margin-top: 8px;
+    border-radius: 100px;
+    padding: 0 4px;
+  }
+
+  .logo-zone {
+    padding: 0 10px 0 12px;
+  }
+
+  .logo-zone .logo {
+    width: 46px;
+  }
+
+  .nav-links {
+    display: none; /* collapsed on mobile */
+  }
+
+  .header-right {
+    gap: 10px;
+    padding: 0 14px 0 0;
+  }
+
+  .contact-link {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    gap: 4px;
+  }
+
+  .divider {
+    height: 22px;
+  }
+
+  .hamburger span:nth-child(1) { width: 22px; }
+  .hamburger span:nth-child(2) { width: 16px; }
+
+  /* ── Hero ── */
+  .hero-section {
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 0;
+  }
+
+  .hero-section .hero-image {
+    width: 100%;
+    height: 480px;
+    border-radius: 12px;
+    background-position: center;
+  }
+
+  .hero-section .hero-content {
+    width: 90%;
+    gap: 14px;
+    padding: 20px;
+  }
+
+  .hero-section .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-section .hero-content p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  /* ── Deliver Section ── */
+  .section {
+    padding: 50px 16px;
+  }
+
+  .deliver-content {
+    width: 100%;
+    gap: 32px;
+  }
+
+  .heading-para h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .heading-para p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  /* Flatten the circle layout into a vertical list on mobile */
+  .six-cards-circle {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .six-cards-circle > img {
+    display: none; /* hide decorative lines SVG */
+  }
+
+  .six-cards-circle .card {
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+  }
+
+  .six-cards-circle .card img {
+    width: 44px !important;
+    flex-shrink: 0;
+  }
+
+  .six-cards-circle .card p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  /* ── Footer wrapper ── */
+  .footer-wrapper {
+    padding: 10px;
+  }
+
+  .footer-content-container {
+    border-radius: 28px;
+  }
+
+  /* ── CTA Dark ── */
+  .cta-dark {
+    padding: 50px 20px 32px;
+  }
+
+  .cta-dark h2 {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+
+  .cta-dark p {
+    max-width: 100%;
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    width: 100%;
+    max-width: 280px;
+    justify-content: space-between;
+    padding: 10px 10px 10px 24px;
+    font-size: 0.78rem;
+  }
+
+  .cta-btns .btn-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ── Footer ── */
+  footer {
+    padding: 36px 20px 20px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 28px;
+  }
+
+  .footer-logo-wrap .logo {
+    width: 56px;
+  }
+
+  .footer-col h4 {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-col ul {
+    gap: 8px;
+  }
+
+  .footer-col a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+
+  .footer-col .contact-line {
+    font-size: 0.82rem;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .footer-regions {
+    padding-top: 20px;
+  }
+
+  .footer-regions h5 {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
+  }
+
+  .region-tags {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .region-tag {
+    padding: 6px 14px;
+    font-size: 0.7rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .footer-bottom span {
+    font-size: 0.72rem;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   360px — Smallest phones (e.g. Galaxy A series)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 360px) {
+
+  .site-header {
+    width: 94%;
+    height: 58px;
+  }
+
+  .logo-zone .logo { width: 40px; }
+
+  .contact-link {
+    font-size: 0.68rem;
+  }
+
+  .hero-section .hero-image {
+    height: 420px;
+  }
+
+  .hero-section .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-section .hero-content p {
+    font-size: 12px;
+  }
+
+  .heading-para h2 { font-size: 24px; }
+
+  .cta-dark h2 { font-size: 1.8rem; }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    font-size: 0.72rem;
+    padding: 9px 9px 9px 18px;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   390px — iPhone 14/15 Pro
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 361px) and (max-width: 390px) {
+
+  .hero-section .hero-image { height: 450px; }
+
+  .hero-section .hero-content h1 { font-size: 24px; }
+
+  .hero-section .hero-content p { font-size: 12.5px; }
+
+  .heading-para h2 { font-size: 26px; }
+
+  .cta-dark h2 { font-size: 2rem; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   410px — Pixel 7 / Galaxy S23+
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 391px) and (max-width: 410px) {
+
+  .hero-section .hero-image { height: 460px; }
+
+  .hero-section .hero-content h1 { font-size: 25px; }
+
+  .heading-para h2 { font-size: 27px; }
+
+  .cta-dark h2 { font-size: 2.1rem; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   430px — iPhone 14 Plus / 15 Plus
+   Already covered by max-width 430 base above — fine-tuning:
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 411px) and (max-width: 430px) {
+
+  .hero-section .hero-image { height: 470px; }
+
+  .hero-section .hero-content h1 { font-size: 26px; }
+
+  .heading-para h2 { font-size: 28px; }
+
+  .cta-dark h2 { font-size: 2.2rem; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   768px — Mobile Landscape / Small Tablet portrait boundary
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 431px) and (max-width: 768px) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 92%;
+    height: 70px;
+    margin-top: 10px;
+  }
+
+  .logo-zone .logo { width: 54px; }
+
+  .nav-links {
+    display: none;
+  }
+
+  .header-right {
+    gap: 14px;
+    padding: 0 18px 0 0;
+  }
+
+  .contact-link { font-size: 0.82rem; }
+
+  /* ── Hero ── */
+  .hero-section {
+    height: auto;
+    padding-top: 90px;
+    padding-bottom: 0;
+  }
+
+  .hero-section .hero-image {
+    width: 100%;
+    height: 360px;
+    border-radius: 14px;
+  }
+
+  .hero-section .hero-content {
+    width: 88%;
+    padding: 0 20px;
+  }
+
+  .hero-section .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+
+  .hero-section .hero-content p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  /* ── Deliver ── */
+  .section { padding: 50px 24px; }
+
+  .deliver-content { width: 100%; gap: 36px; }
+
+  .heading-para h2 { font-size: 32px; text-align: center; }
+
+  .heading-para p { font-size: 15px; text-align: center; }
+
+  /* Cards: 2-column grid */
+  .six-cards-circle {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .six-cards-circle > img { display: none; }
+
+  .six-cards-circle .card {
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100%;
+    height: auto;
+    padding: 20px 16px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .six-cards-circle .card img {
+    width: 48px !important;
+  }
+
+  /* ── Footer ── */
+  .footer-content-container { border-radius: 36px; }
+
+  .cta-dark { padding: 60px 30px 36px; }
+
+  .cta-dark h2 { font-size: clamp(2rem, 7vw, 3.5rem); }
+
+  .cta-dark p { max-width: 90%; font-size: 0.85rem; }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    max-width: 300px;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 0.82rem;
+  }
+
+  footer { padding: 40px 24px 24px; }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-logo-wrap {
+    grid-column: 1 / -1;
+  }
+
+  .region-tag {
+    padding: 6px 16px;
+    font-size: 0.74rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET PORTRAIT  (769px – 1024px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 90%;
+    height: 72px;
+  }
+
+  .logo-zone .logo { width: 60px; }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.85rem;
+    letter-spacing: 0.07em;
+  }
+
+  .contact-link { font-size: 0.85rem; }
+
+  /* ── Hero ── */
+  .hero-section {
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  .hero-section .hero-image {
+    width: 97%;
+    height: 480px;
+    border-radius: 18px;
+  }
+
+  .hero-section .hero-content {
+    width: 76%;
+    padding: 0 30px;
+  }
+
+  .hero-section .hero-content h1 {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .hero-section .hero-content p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+
+  /* ── Deliver ── */
+  .section { padding: 60px 36px; }
+
+  .deliver-content { width: 100%; gap: 48px; }
+
+  .heading-para h2 { font-size: 38px; }
+
+  /* Cards: 3-column grid */
+  .six-cards-circle {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .six-cards-circle > img { display: none; }
+
+  .six-cards-circle .card {
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100%;
+    height: auto;
+    padding: 24px 18px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .six-cards-circle .card img {
+    width: 52px !important;
+  }
+
+  .six-cards-circle .card p { font-size: 12px; }
+
+  /* ── Footer ── */
+  .footer-content-container { border-radius: 48px; }
+
+  .cta-dark { padding: 70px 48px 40px; }
+
+  .cta-dark h2 { font-size: clamp(2.5rem, 6vw, 5rem); }
+
+  .cta-dark p { max-width: 75%; font-size: 1rem; }
+
+  .cta-btns { flex-direction: row; }
+
+  footer { padding: 50px 40px 28px; }
+
+  .footer-top {
+    grid-template-columns: 140px 1fr 1fr 1fr;
+    gap: 28px;
+  }
+
+  /* Last col wraps to next row */
+  .footer-top .footer-col:last-child {
+    grid-column: 2 / 3;
+  }
+
+  .region-tag {
+    padding: 7px 20px;
+    font-size: 0.78rem;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET LANDSCAPE  (1025px – 1200px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 88%;
+    height: 76px;
+  }
+
+  .nav-links {
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .nav-links a { font-size: 0.95rem; }
+
+  .contact-link { font-size: 0.95rem; }
+
+  /* ── Hero ── */
+  .hero-section {
+    height: auto;
+    padding-top: 108px;
+  }
+
+  .hero-section .hero-image {
+    width: 97%;
+    height: 520px;
+  }
+
+  .hero-section .hero-content {
+    width: 72%;
+  }
+
+  .hero-section .hero-content h1 { font-size: 40px; }
+
+  .hero-section .hero-content p { font-size: 16px; }
+
+  /* ── Deliver ── */
+  .deliver-content { width: 100%; gap: 52px; }
+
+  .heading-para h2 { font-size: 42px; }
+
+  /* Cards: keep circular layout but constrained */
+  .six-cards-circle {
+    width: 75%;
+    height: 860px;
+  }
+
+  /* ── Footer ── */
+  .footer-top {
+    grid-template-columns: 160px 1fr 1fr 1fr 1fr;
+    gap: 28px;
+  }
+
+  .cta-dark h2 { font-size: clamp(3rem, 6vw, 5.5rem); }
+
+  .cta-dark p { max-width: 65%; }
+}
+
+/* ──────────────────────────────────────────────────────────────
+   MOBILE LANDSCAPE ORIENTATION  (any phone rotated sideways)
+   Using orientation media query for phones up to ~900px wide
+   ────────────────────────────────────────────────────────────── */
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 500px) {
+
+  /* ── Header ── */
+  .site-header {
+    height: 58px;
+    width: 92%;
+  }
+
+  .logo-zone .logo { width: 42px; }
+
+  .nav-links {
+    display: flex;
+    gap: 16px;
+    padding: 0 12px;
+  }
+
+  .nav-links a { font-size: 0.72rem; letter-spacing: 0.06em; }
+
+  .contact-link { font-size: 0.72rem; letter-spacing: 0.06em; }
+
+  .header-right { gap: 10px; padding: 0 14px 0 0; }
+
+  /* ── Hero ── */
+  .hero-section {
+    height: auto;
+    padding-top: 70px;
+    padding-bottom: 16px;
+  }
+
+  .hero-section .hero-image {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+  }
+
+  .hero-section .hero-content {
+    width: 60%;
+    padding: 0 16px;
+  }
+
+  .hero-section .hero-content h1 { font-size: 22px; }
+
+  .hero-section .hero-content p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  /* ── Deliver ── */
+  .section { padding: 40px 28px; }
+
+  .deliver-content { gap: 28px; }
+
+  .heading-para h2 { font-size: 28px; }
+
+  .six-cards-circle {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .six-cards-circle > img { display: none; }
+
+  .six-cards-circle .card {
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: 100%;
+    height: auto;
+    padding: 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .six-cards-circle .card img {
+    width: 38px !important;
+  }
+
+  .six-cards-circle .card p { font-size: 10px; line-height: 1.5; }
+
+  /* ── CTA / Footer ── */
+  .cta-dark { padding: 40px 28px 28px; }
+
+  .cta-dark h2 { font-size: 2rem; }
+
+  .cta-dark p { max-width: 80%; font-size: 0.78rem; }
+
+  .cta-btns { flex-direction: row; gap: 10px; }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { font-size: 0.72rem; padding: 8px 10px 8px 18px; }
+
+  .cta-btns .btn-icon { width: 32px; height: 32px; }
+
+  footer { padding: 30px 24px 18px; }
+
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .footer-logo-wrap { grid-column: 1 / -1; }
+
+  .region-tag { padding: 5px 12px; font-size: 0.68rem; }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.7rem;
+  }
+}

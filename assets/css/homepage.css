@@ -1069,3 +1069,1551 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================================
+   RESPONSIVE.CSS — Group Crazy Pineapple Inc
+   Breakpoints: 360 | 390 | 410 | 430 | 768 (landscape) |
+                tablet portrait (768–1024) | tablet landscape (1024–1200)
+   ============================================================ */
+
+/* ─────────────────────────────────────────────
+   SHARED MOBILE BASE  (≤ 430px — covers 360/390/410/430)
+   ───────────────────────────────────────────── */
+@media (max-width: 430px) {
+
+  /* ── Fixed logo ── */
+  .img-container {
+    display: none; /* hide the large floating logo on tiny screens */
+  }
+
+  /* ── Site Header ── */
+  .site-header {
+    padding: 0 16px;
+    height: 64px;
+  }
+
+  .logo-zone {
+    padding: 0 12px 0 0;
+  }
+
+  .logo-zone .logo {
+    width: 48px;
+  }
+
+  .nav-home-tab a {
+    padding: 20px 8px;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-links {
+    display: none; /* collapsed behind hamburger */
+  }
+
+  .header-right {
+    padding: 0 0 0 12px;
+    gap: 12px;
+    margin-left: auto;
+  }
+
+  .contact-link {
+    display: none; /* too cramped — show only in hamburger menu */
+  }
+
+  /* ── Hero Section ── */
+  .hero {
+    padding: 28px 16px 0;
+  }
+
+  .hero-tag {
+    gap: 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .hero-headline {
+    font-size: clamp(44px, 12vw, 56px);
+    gap: 8px 10px;
+  }
+
+  .hero-headline > div {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-pill {
+    height: 60px;
+    border-radius: 10px;
+  }
+
+  .hero-pill img {
+    width: 90px;
+  }
+
+  .hero-badge {
+    height: 60px;
+    width: 120px;
+    border-radius: 10px;
+    padding: 4px 6px;
+  }
+
+  .hero-sub {
+    font-size: 0.72rem;
+    width: 90%;
+    margin: 12px 0 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 12px 10px 24px;
+    font-size: 0.8rem;
+  }
+
+  .hero-ctas .btn-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* ── Hero Gallery ── */
+  .hero-gallery {
+    gap: 14px;
+    padding: 0 16px 16px;
+  }
+
+  .hero-gallery-item {
+    max-width: 280px;
+    min-width: 240px;
+  }
+
+  /* ── Services ── */
+  .section-full {
+    padding: 48px 16px;
+  }
+
+  .section-full-inner {
+    max-width: 100%;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-title {
+    font-size: clamp(36px, 10vw, 52px);
+  }
+
+  .section-desc {
+    max-width: 100%;
+    font-size: 0.75rem;
+  }
+
+  .services-grid {
+    gap: 14px;
+  }
+
+  .services-grid .row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .service-card {
+    width: 100%;
+    border-radius: 20px;
+    padding: 24px 20px;
+  }
+
+  .service-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+  }
+
+  /* ── Stats ── */
+  .stats-bar {
+    padding: 36px 16px;
+  }
+
+  .stats-inner {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .stats-bar .sep-line {
+    width: 60px;
+    height: 2px;
+  }
+
+  .stat-num {
+    font-size: 4.5rem;
+  }
+
+  /* ── Portfolio ── */
+  .proven-section {
+    padding: 48px 16px;
+    max-width: 100%;
+  }
+
+  .proven-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .proven-header .section-title {
+    max-width: 100%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .portfolio-item h3 {
+    font-size: clamp(1.4rem, 7vw, 2rem);
+  }
+
+  .view-portfolio {
+    text-align: center;
+    padding: 32px 0 10px;
+  }
+
+  .view-portfolio a {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+  }
+
+  /* ── Clients ── */
+  .clients-bar {
+    padding: 28px 16px;
+  }
+
+  .clients-inner {
+    gap: 14px;
+  }
+
+  .client-logo {
+    width: 120px;
+  }
+
+  /* ── Footer wrapper ── */
+  .footer-wrapper {
+    padding: 10px;
+  }
+
+  .footer-content-container {
+    border-radius: 28px;
+  }
+
+  /* ── CTA Dark ── */
+  .cta-dark {
+    padding: 56px 20px 32px;
+  }
+
+  .cta-dark h2 {
+    font-size: clamp(2rem, 9vw, 3.2rem);
+    margin-bottom: 14px;
+  }
+
+  .cta-dark p {
+    font-size: 0.8rem;
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 12px 10px 24px;
+    font-size: 0.82rem;
+  }
+
+  /* ── Footer ── */
+  footer {
+    padding: 40px 20px 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-logo-wrap {
+    grid-column: 1 / -1;
+  }
+
+  .footer-regions {
+    padding-top: 20px;
+  }
+
+  .region-tags {
+    gap: 6px;
+    margin-bottom: 18px;
+  }
+
+  .region-tag {
+    padding: 6px 18px;
+    font-size: 0.7rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .footer-bottom span {
+    font-size: 0.72rem;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   360px  — narrowest phones
+   ───────────────────────────────────────────── */
+@media (max-width: 360px) {
+
+  .site-header {
+    height: 58px;
+    padding: 0 12px;
+  }
+
+  .logo-zone .logo {
+    width: 40px;
+  }
+
+  .nav-home-tab a {
+    font-size: 0.65rem;
+    padding: 18px 6px;
+  }
+
+  .hero {
+    padding: 20px 12px 0;
+  }
+
+  .hero-headline {
+    font-size: clamp(36px, 11vw, 46px);
+  }
+
+  .hero-pill {
+    height: 50px;
+  }
+
+  .hero-pill img {
+    width: 76px;
+  }
+
+  .hero-badge {
+    height: 50px;
+    width: 100px;
+  }
+
+  .hero-sub {
+    font-size: 0.65rem;
+    width: 95%;
+  }
+
+  .stat-num {
+    font-size: 3.8rem;
+  }
+
+  .client-logo {
+    width: 100px;
+  }
+
+  .region-tag {
+    padding: 5px 14px;
+    font-size: 0.65rem;
+  }
+
+  .cta-dark h2 {
+    font-size: clamp(1.8rem, 10vw, 2.8rem);
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   390px  — iPhone 14 / Pixel 7 size
+   ───────────────────────────────────────────── */
+@media (min-width: 361px) and (max-width: 390px) {
+
+  .hero-headline {
+    font-size: clamp(42px, 11.5vw, 52px);
+  }
+
+  .hero-pill {
+    height: 56px;
+  }
+
+  .hero-pill img {
+    width: 84px;
+  }
+
+  .hero-badge {
+    height: 56px;
+    width: 112px;
+  }
+
+  .stat-num {
+    font-size: 4.2rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   410px  — mid-range androids
+   ───────────────────────────────────────────── */
+@media (min-width: 391px) and (max-width: 410px) {
+
+  .hero-headline {
+    font-size: clamp(46px, 11.8vw, 56px);
+  }
+
+  .hero-pill {
+    height: 58px;
+  }
+
+  .hero-pill img {
+    width: 88px;
+  }
+
+  .hero-badge {
+    height: 58px;
+    width: 116px;
+  }
+
+  .stat-num {
+    font-size: 4.4rem;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   430px  — iPhone 15 Pro Max / large androids
+   ───────────────────────────────────────────── */
+@media (min-width: 411px) and (max-width: 430px) {
+
+  .hero-headline {
+    font-size: clamp(48px, 12vw, 58px);
+  }
+
+  .hero-pill {
+    height: 62px;
+  }
+
+  .hero-pill img {
+    width: 94px;
+  }
+
+  .hero-badge {
+    height: 62px;
+    width: 124px;
+  }
+
+  .stat-num {
+    font-size: 4.6rem;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   768px LANDSCAPE  — phones rotated
+   (short height, wider width)
+   ───────────────────────────────────────────── */
+@media (max-height: 500px) and (min-width: 600px) and (orientation: landscape) {
+
+  .img-container {
+    display: none;
+  }
+
+  /* Header */
+  .site-header {
+    height: 56px;
+    padding: 0 28px;
+  }
+
+  .logo-zone .logo {
+    width: 44px;
+  }
+
+  .nav-home-tab a {
+    padding: 18px 10px;
+    font-size: 0.8rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  .contact-link {
+    display: flex;
+    font-size: 0.8rem;
+  }
+
+  /* Hero */
+  .hero-section .section-container {
+    min-height: 100svh;
+  }
+
+  .hero {
+    padding: 20px 40px 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-tag {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.65rem;
+    margin-bottom: 10px;
+  }
+
+  .hero-headline {
+    font-size: clamp(40px, 7vw, 60px);
+    gap: 6px 10px;
+  }
+
+  .hero-pill {
+    height: 55px;
+  }
+
+  .hero-pill img {
+    width: 82px;
+  }
+
+  .hero-badge {
+    height: 55px;
+    width: 110px;
+  }
+
+  .hero-sub {
+    font-size: 0.7rem;
+    width: 70%;
+    margin: 10px 0 18px;
+  }
+
+  .hero-ctas {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    padding: 8px 12px 8px 20px;
+    font-size: 0.75rem;
+  }
+
+  .hero-ctas .btn-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Gallery */
+  .hero-gallery-item {
+    max-width: 320px;
+    min-width: 260px;
+  }
+
+  /* Services */
+  .section-full {
+    padding: 48px 32px;
+  }
+
+  .services-grid .row {
+    flex-direction: row;
+  }
+
+  .service-card {
+    width: 33%;
+  }
+
+  /* Stats */
+  .stats-inner {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .stats-bar .sep-line {
+    width: 2px;
+    height: auto;
+  }
+
+  .stat-num {
+    font-size: 4rem;
+  }
+
+  /* Portfolio */
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .cta-btns {
+    flex-direction: row;
+  }
+
+  .cta-dark h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+}
+
+/* ─────────────────────────────────────────────
+   TABLET PORTRAIT  (431px – 1023px, portrait)
+   ───────────────────────────────────────────── */
+@media (min-width: 431px) and (max-width: 1023px) and (orientation: portrait) {
+
+  /* Floating logo */
+  .img-container img {
+    width: 30%;
+    top: 14px;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    padding: 0 28px;
+    height: 72px;
+  }
+
+  .logo-zone .logo {
+    width: 56px;
+  }
+
+  .nav-home-tab a {
+    padding: 24px 10px;
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    display: none; /* hamburger only on tablet portrait */
+  }
+
+  .contact-link {
+    font-size: 0.9rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 40px 36px 0;
+  }
+
+  .hero-tag {
+    font-size: 0.75rem;
+    gap: 10px;
+  }
+
+  .hero-headline {
+    font-size: clamp(52px, 9vw, 82px);
+    gap: 8px 12px;
+  }
+
+  .hero-pill {
+    height: 76px;
+    border-radius: 12px;
+  }
+
+  .hero-pill img {
+    width: 114px;
+  }
+
+  .hero-badge {
+    height: 76px;
+    width: 160px;
+    border-radius: 12px;
+  }
+
+  .hero-sub {
+    font-size: 0.88rem;
+    width: 78%;
+    margin: 14px 0 28px;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 14px 10px 28px;
+    font-size: 0.88rem;
+  }
+
+  /* ── Gallery ── */
+  .hero-gallery {
+    gap: 20px;
+    padding: 0 16px 16px;
+  }
+
+  .hero-gallery-item {
+    max-width: 360px;
+    min-width: 300px;
+  }
+
+  /* ── Services ── */
+  .section-full {
+    padding: 60px 32px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: clamp(40px, 8vw, 72px);
+  }
+
+  .section-desc {
+    max-width: 100%;
+    font-size: 0.82rem;
+  }
+
+  .services-grid .row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .service-card {
+    width: 100%;
+  }
+
+  /* Two-column for wider tablets in portrait */
+  @media (min-width: 680px) {
+    .services-grid .row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      width: calc(50% - 8px);
+    }
+  }
+
+  /* ── Stats ── */
+  .stats-bar {
+    padding: 44px 32px;
+  }
+
+  .stats-inner {
+    gap: 48px;
+  }
+
+  .stat-num {
+    font-size: 5rem;
+  }
+
+  /* ── Portfolio ── */
+  .proven-section {
+    padding: 60px 32px;
+    max-width: 100%;
+  }
+
+  .proven-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .proven-header .section-title {
+    max-width: 100%;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .portfolio-item h3 {
+    font-size: clamp(1.4rem, 4vw, 2.4rem);
+  }
+
+  .view-portfolio {
+    text-align: center;
+  }
+
+  /* ── Clients ── */
+  .clients-bar {
+    padding: 32px 32px;
+  }
+
+  .client-logo {
+    width: 130px;
+  }
+
+  /* ── Footer ── */
+  .footer-wrapper {
+    padding: 12px;
+  }
+
+  .footer-content-container {
+    border-radius: 40px;
+  }
+
+  .cta-dark {
+    padding: 64px 36px 36px;
+  }
+
+  .cta-dark h2 {
+    font-size: clamp(2.2rem, 7vw, 5rem);
+  }
+
+  .cta-dark p {
+    max-width: 80%;
+    font-size: 0.88rem;
+  }
+
+  .cta-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    width: 80%;
+    max-width: 360px;
+    justify-content: space-between;
+    font-size: 0.88rem;
+  }
+
+  footer {
+    padding: 48px 32px 24px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-logo-wrap {
+    grid-column: 1 / -1;
+  }
+
+  .region-tag {
+    padding: 6px 20px;
+    font-size: 0.76rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   TABLET LANDSCAPE  (768px – 1199px, landscape)
+   Covers iPad landscape, Surface Pro, etc.
+   ───────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+
+  /* Floating logo */
+  .img-container img {
+    width: 28%;
+    top: 16px;
+  }
+
+  /* ── Header ── */
+  .site-header {
+    padding: 0 40px;
+    height: 76px;
+  }
+
+  .logo-zone .logo {
+    width: 60px;
+  }
+
+  .nav-home-tab a {
+    padding: 26px 10px;
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .contact-link {
+    font-size: 0.9rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 44px 48px 0;
+  }
+
+  .hero-tag {
+    font-size: 0.8rem;
+    gap: 12px;
+  }
+
+  .hero-headline {
+    font-size: clamp(58px, 8vw, 90px);
+    gap: 10px 14px;
+  }
+
+  .hero-pill {
+    height: 84px;
+    border-radius: 14px;
+  }
+
+  .hero-pill img {
+    width: 126px;
+  }
+
+  .hero-badge {
+    height: 84px;
+    width: 176px;
+    border-radius: 14px;
+  }
+
+  .hero-sub {
+    font-size: 0.96rem;
+    width: 68%;
+    margin: 16px 0 30px;
+  }
+
+  .hero-ctas {
+    flex-direction: row;
+    gap: 14px;
+    margin-bottom: 44px;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    padding: 10px 14px 10px 28px;
+    font-size: 0.9rem;
+  }
+
+  /* ── Services ── */
+  .section-full {
+    padding: 68px 44px;
+  }
+
+  .section-header {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0;
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: clamp(44px, 6vw, 80px);
+  }
+
+  .section-desc {
+    max-width: 38%;
+    font-size: 0.84rem;
+  }
+
+  .services-grid .row {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .service-card {
+    width: 33%;
+  }
+
+  /* ── Stats ── */
+  .stats-bar {
+    padding: 48px 44px;
+  }
+
+  .stats-inner {
+    gap: 64px;
+  }
+
+  .stat-num {
+    font-size: 5.5rem;
+  }
+
+  /* ── Portfolio ── */
+  .proven-section {
+    padding: 68px 44px;
+    max-width: 100%;
+  }
+
+  .proven-header {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 44px;
+  }
+
+  .proven-header .section-title {
+    max-width: 380px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .portfolio-item h3 {
+    font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+  }
+
+  .view-portfolio {
+    text-align: right;
+  }
+
+  /* ── Clients ── */
+  .clients-bar {
+    padding: 36px 44px;
+  }
+
+  .client-logo {
+    width: 145px;
+  }
+
+  /* ── Footer ── */
+  .footer-wrapper {
+    padding: 14px;
+  }
+
+  .footer-content-container {
+    border-radius: 52px;
+  }
+
+  .cta-dark {
+    padding: 72px 48px 40px;
+  }
+
+  .cta-dark h2 {
+    font-size: clamp(2.6rem, 6vw, 6rem);
+  }
+
+  .cta-dark p {
+    max-width: 60%;
+    font-size: 0.96rem;
+  }
+
+  .cta-btns {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  footer {
+    padding: 56px 48px 28px;
+  }
+
+  .footer-top {
+    grid-template-columns: 160px 1fr 1fr 1fr 1fr;
+    gap: 28px;
+  }
+
+  .footer-logo-wrap {
+    grid-column: auto;
+  }
+
+  .region-tag {
+    padding: 7px 24px;
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   768px TABLET  — portrait iPads at exactly 768
+   (applied in addition to tablet portrait block)
+   ───────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+
+  .hero-headline {
+    font-size: clamp(64px, 9vw, 88px);
+  }
+
+  .hero-pill {
+    height: 82px;
+  }
+
+  .hero-pill img {
+    width: 122px;
+  }
+
+  .hero-badge {
+    height: 82px;
+    width: 168px;
+  }
+
+  .hero-sub {
+    width: 68%;
+  }
+
+  .hero-ctas {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-outline {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .services-grid .row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+
+  .service-card {
+    width: 33%;
+  }
+
+  .stats-inner {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .stats-bar .sep-line {
+    width: 2px;
+    height: auto;
+  }
+
+  .stat-num {
+    font-size: 5.2rem;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .proven-header {
+    flex-direction: row;
+  }
+
+  .proven-header .section-title {
+    max-width: 340px;
+  }
+
+  .footer-top {
+    grid-template-columns: 140px 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .footer-logo-wrap {
+    grid-column: auto;
+  }
+
+  .cta-dark p {
+    max-width: 64%;
+  }
+
+  .cta-btns {
+    flex-direction: row;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   GLOBAL HELPERS — apply at all mobile sizes
+   ───────────────────────────────────────────── */
+@media (max-width: 1023px) {
+
+  /* Ensure images never overflow */
+  .portfolio-item .proj-img img,
+  .hero-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Avoid horizontal scroll from GSAP initial states on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Smooth touch scrolling in gallery */
+  .hero-gallery {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .hero-gallery-item {
+    scroll-snap-align: start;
+  }
+}
+
+
+/* ============================================================
+   MOBILE-MENU.CSS — Group Crazy Pineapple Inc
+   Full-screen slide-in nav drawer for mobile / tablet portrait
+   ============================================================ */
+
+/* ── Hamburger active state (X icon) ── */
+.hamburger.is-open span:nth-child(1) {
+  width: 26px;
+  transform: translateY(7px) rotate(45deg);
+  background: #fff;
+}
+
+.hamburger.is-open span:nth-child(2) {
+  width: 26px;
+  transform: translateY(0px) rotate(-45deg);
+  background: #fff;
+}
+
+.hamburger span {
+  transition: transform 0.35s cubic-bezier(0.77, 0, 0.175, 1),
+              width     0.25s ease,
+              background 0.2s ease;
+  transform-origin: center;
+}
+
+/* ── Backdrop ── */
+.mobile-nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.mobile-nav-backdrop.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Drawer panel ── */
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(340px, 88vw);
+  height: 100dvh;
+  background: #0d0d0d;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  overflow: hidden;
+}
+
+.mobile-nav.is-open {
+  transform: translateX(0);
+}
+
+/* ── Gold accent line on the left edge ── */
+.mobile-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #A16C16, #E6B554, #A16C16);
+  flex-shrink: 0;
+}
+
+/* ── Drawer header ── */
+.mobile-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 64px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  flex-shrink: 0;
+}
+
+.mobile-nav-logo {
+  width: 44px;
+  height: auto;
+}
+
+.mobile-nav-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Close button inside drawer */
+.mobile-nav-close {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.mobile-nav-close::before,
+.mobile-nav-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.mobile-nav-close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.mobile-nav-close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.mobile-nav-close:hover::before,
+.mobile-nav-close:hover::after {
+  background: #E6B554;
+}
+
+/* ── Navigation links ── */
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 28px 28px;
+  gap: 4px;
+  flex: 1;
+}
+
+.mobile-nav-links a {
+  font-family: var(--secondary-font, serif);
+  font-size: clamp(1.8rem, 8vw, 2.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  line-height: 1.15;
+  position: relative;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+  /* stagger reveal */
+  opacity: 0;
+  transform: translateX(24px);
+  transition: color 0.25s ease,
+              opacity 0.4s ease,
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-nav.is-open .mobile-nav-links a {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* stagger delays */
+.mobile-nav.is-open .mobile-nav-links a:nth-child(1) { transition-delay: 0.08s; }
+.mobile-nav.is-open .mobile-nav-links a:nth-child(2) { transition-delay: 0.14s; }
+.mobile-nav.is-open .mobile-nav-links a:nth-child(3) { transition-delay: 0.20s; }
+.mobile-nav.is-open .mobile-nav-links a:nth-child(4) { transition-delay: 0.26s; }
+
+/* Hover: gold gradient text */
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  color: transparent;
+  background-image: linear-gradient(to right, #A16C16, #E6B554);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Active underline dot */
+.mobile-nav-links a.active::after {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #A16C16, #E6B554);
+  margin-top: 4px;
+}
+
+/* ── Divider ── */
+.mobile-nav-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 28px;
+  flex-shrink: 0;
+}
+
+/* ── Contact block at the bottom ── */
+.mobile-nav-footer {
+  padding: 24px 28px 36px;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease 0.32s,
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) 0.32s;
+}
+
+.mobile-nav.is-open .mobile-nav-footer {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-nav-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(45deg, #A16C16, #E6B554);
+  color: #fff;
+  padding: 12px 20px 12px 28px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 55px;
+  text-decoration: none;
+  width: 100%;
+  justify-content: space-between;
+  transition: opacity 0.2s;
+}
+
+.mobile-nav-contact-btn:hover {
+  opacity: 0.85;
+}
+
+.mobile-nav-contact-btn-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  flex-shrink: 0;
+}
+
+.mobile-nav-contact-btn-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Social row */
+.mobile-nav-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mobile-nav-social a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.mobile-nav-social a:hover {
+  border-color: #E6B554;
+  color: #E6B554;
+}
+
+/* ── Only show on mobile / tablet portrait ── */
+.mobile-nav,
+.mobile-nav-backdrop {
+  display: none;
+}
+
+@media (max-width: 430px),
+       (min-width: 431px) and (max-width: 1023px) and (orientation: portrait) {
+  .mobile-nav,
+  .mobile-nav-backdrop {
+    display: flex;
+  }
+}
+
+/* Also show in phone landscape */
+@media (max-height: 500px) and (min-width: 600px) and (orientation: landscape) {
+  .mobile-nav,
+  .mobile-nav-backdrop {
+    display: flex;
+  }
+
+  /* Compact layout for short screens */
+  .mobile-nav-links a {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    padding: 3px 0;
+  }
+
+  .mobile-nav-footer {
+    padding: 16px 28px 20px;
+  }
+}
+
+/* Prevent body scroll when menu is open */
+body.nav-open {
+  overflow: hidden;
+}

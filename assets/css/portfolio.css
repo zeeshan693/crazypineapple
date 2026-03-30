@@ -1099,3 +1099,353 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* ============================================================
+   PORTFOLIO RESPONSIVE STYLES
+   Breakpoints: 360, 390, 410, 430 (mobile portrait),
+                768 landscape, tablet portrait (769–1024),
+                tablet landscape (1025–1200)
+   Link AFTER portfolio.css to override defaults.
+   ============================================================ */
+
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET LANDSCAPE  (1025px – 1200px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+
+  /* Header */
+  .site-header { width: 90%; height: 76px; }
+  .logo-zone .logo { width: 62px; }
+  .nav-links { gap: 24px; padding: 0 20px; }
+  .nav-links a { font-size: 0.95rem; }
+  .contact-link { font-size: 0.95rem; }
+
+  /* Hero */
+  .hero-overlay { padding-top: 96px; }
+  .hero { padding: 48px 48px 0; }
+  .hero-headline { font-size: clamp(60px, 7.5vw, 96px); }
+  .hero-sub { font-size: 1.25rem; width: 60%; }
+  .hero .img-cards img { width: 34%; }
+  .hero .img-cards img:nth-child(2) { width: 29%; }
+
+  /* Portfolio grid */
+  .proven-section { padding: 70px 48px; }
+  .portfolio-grid { gap: 36px; }
+  .portfolio-item h3 { font-size: clamp(1.4rem, 3vw, 2.4rem); }
+
+  /* Clients */
+  .clients-bar { padding: 36px 48px; }
+  .client-logo { width: 140px; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 160px 1fr 1fr 1fr 1fr; gap: 28px; }
+  .cta-dark h2 { font-size: clamp(2.8rem, 5.5vw, 5.5rem); }
+  .cta-dark p { max-width: 58%; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   TABLET PORTRAIT  (769px – 1024px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  /* Header */
+  .site-header { width: 92%; height: 72px; }
+  .logo-zone .logo { width: 56px; }
+  .nav-links { gap: 18px; padding: 0 16px; }
+  .nav-links a { font-size: 0.85rem; letter-spacing: 0.07em; }
+  .header-right { gap: 12px; padding: 0 16px; }
+  .contact-link { font-size: 0.85rem; }
+
+  /* Hero */
+  .hero-overlay { padding-top: 88px; }
+  .hero { padding: 40px 36px 0; }
+  .section-container { border-radius: 16px; }
+  .hero-headline { font-size: clamp(52px, 7vw, 80px); gap: 6px 10px; }
+  .hero-sub { font-size: 1.1rem; width: 68%; }
+  .hero .img-cards img { width: 38%; }
+  .hero .img-cards img:nth-child(2) { width: 33%; }
+  .hero-overlay .blurry-bar { height: 50px; }
+
+  /* Portfolio */
+  .proven-section { padding: 60px 36px; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .portfolio-item h3 { font-size: clamp(1.3rem, 3vw, 2rem); }
+  .portfolio-item p { font-size: 0.88rem; }
+  .view-portfolio { padding: 36px 0 16px; }
+  .view-portfolio a { font-size: clamp(1rem, 3vw, 1.6rem); }
+
+  /* Clients */
+  .clients-bar { padding: 30px 36px; }
+  .clients-inner { gap: 18px; }
+  .client-logo { width: 130px; }
+
+  /* Footer */
+  .footer-content-container { border-radius: 48px; }
+  .cta-dark { padding: 70px 40px 36px; }
+  .cta-dark h2 { font-size: clamp(2.2rem, 5.5vw, 4.5rem); }
+  .cta-dark p { max-width: 72%; font-size: 0.95rem; }
+  .cta-btns { flex-direction: row; }
+  footer { padding: 48px 36px 24px; }
+  .footer-top { grid-template-columns: 140px 1fr 1fr 1fr; gap: 24px; }
+  .footer-top .footer-col:last-child { grid-column: 2 / 3; }
+  .region-tag { padding: 6px 20px; font-size: 0.76rem; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   SHARED MOBILE BASE  (≤ 430px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 430px) {
+
+  /* Header */
+  .site-header {
+    width: 94%;
+    height: 60px;
+    margin-top: 8px;
+    border-radius: 100px;
+  }
+  .logo-zone { padding: 0 10px 0 12px; }
+  .logo-zone .logo { width: 44px; }
+  .nav-links { display: none; }
+  .header-right { gap: 10px; padding: 0 12px 0 0; margin-left: auto; }
+  .contact-link { font-size: 0.72rem; letter-spacing: 0.07em; gap: 4px; }
+  .divider { height: 22px; }
+  .hamburger span:nth-child(1) { width: 22px; }
+  .hamburger span:nth-child(2) { width: 16px; }
+
+  /* Hero section */
+  .hero-section { margin: 0 6px; }
+  .section-container { border-radius: 14px; }
+  .hero-overlay { padding-top: 72px; }
+  .hero { padding: 20px 16px 0; }
+  .hero-headline {
+    font-size: clamp(36px, 10vw, 52px);
+    line-height: 0.88;
+    gap: 4px 8px;
+    margin-bottom: 8px;
+  }
+  .hero-headline > div { gap: 10px; }
+  .hero-sub {
+    font-size: 0.7rem;
+    width: 88%;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+  }
+  .hero .img-cards { margin-top: 16px; }
+  .hero .img-cards img { width: 46%; }
+  .hero .img-cards img:nth-child(2) { width: 40%; bottom: -12px; }
+  .hero-overlay .blurry-bar { height: 40px; }
+
+  /* Portfolio section */
+  .proven-section { padding: 40px 14px; }
+  .portfolio-grid { grid-template-columns: 1fr; gap: 32px; }
+  .portfolio-item h3 { font-size: clamp(1.4rem, 7vw, 2rem); }
+  .portfolio-item p { font-size: 0.85rem; line-height: 1.6; }
+  .portfolio-item .proj-img { transform: none; border-radius: 10px; }
+  .tag { font-size: 10px; padding: 4px 14px; }
+  .view-portfolio { padding: 28px 0 12px; text-align: center; }
+  .view-portfolio a { font-size: clamp(1rem, 5vw, 1.4rem); }
+
+  /* Clients */
+  .clients-bar { padding: 24px 14px; }
+  .clients-inner { gap: 12px; }
+  .client-logo { width: 100px; }
+
+  /* Footer */
+  .footer-wrapper { padding: 0 8px 8px; }
+  .footer-content-container { border-radius: 24px; }
+  .cta-dark { padding: 44px 18px 28px; }
+  .cta-dark h2 { font-size: clamp(1.8rem, 9vw, 2.6rem); line-height: 1.1; margin-bottom: 14px; }
+  .cta-dark p { max-width: 100%; font-size: 0.78rem; margin-bottom: 22px; line-height: 1.6; }
+  .cta-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline {
+    width: 100%;
+    max-width: 270px;
+    justify-content: space-between;
+    padding: 9px 10px 9px 22px;
+    font-size: 0.74rem;
+  }
+  .cta-btns .btn-icon { width: 34px; height: 34px; }
+  footer { padding: 32px 16px 16px; }
+  .footer-top { grid-template-columns: 1fr; gap: 26px; text-align: center; }
+  .footer-logo-wrap { display: flex; justify-content: center; }
+  .footer-col h4 { margin-bottom: 10px; font-size: 0.82rem; }
+  .footer-col ul { gap: 8px; }
+  .footer-col ul li a { font-size: 0.82rem; }
+  .footer-col .contact-line { justify-content: center; font-size: 0.8rem; }
+  .social-icons { justify-content: center; }
+  .footer-regions { padding-top: 18px; }
+  .footer-regions h5 { font-size: 0.78rem; text-align: center; margin-bottom: 10px; }
+  .region-tags { justify-content: center; gap: 6px; margin-bottom: 16px; }
+  .region-tag { padding: 5px 14px; font-size: 0.66rem; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; margin-top: 14px; padding-top: 14px; }
+  .footer-bottom span { font-size: 0.68rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   430px fine-tune
+   ────────────────────────────────────────────────────────────── */
+@media screen and (min-width: 411px) and (max-width: 430px) {
+  .hero-headline { font-size: clamp(38px, 10vw, 54px); }
+  .hero-sub { font-size: 0.72rem; }
+  .portfolio-item h3 { font-size: 1.8rem; }
+  .cta-dark h2 { font-size: 2.1rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   410px — Pixel 7 / Galaxy S23
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 410px) {
+  .site-header { width: 96%; height: 58px; }
+  .hero-headline { font-size: clamp(34px, 9.5vw, 48px); }
+  .hero-sub { font-size: 0.68rem; width: 90%; }
+  .hero .img-cards img { width: 48%; }
+  .hero .img-cards img:nth-child(2) { width: 42%; }
+  .proven-section { padding: 36px 12px; }
+  .portfolio-grid { gap: 28px; }
+  .portfolio-item h3 { font-size: 1.6rem; }
+  .portfolio-item p { font-size: 0.82rem; }
+  .cta-dark h2 { font-size: 1.9rem; }
+  .region-tag { padding: 4px 12px; font-size: 0.62rem; }
+  .footer-bottom span { font-size: 0.64rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   390px — iPhone 14/15 Pro
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 390px) {
+  .logo-zone .logo { width: 40px; }
+  .contact-link { font-size: 0.68rem; }
+  .hero-overlay { padding-top: 68px; }
+  .hero { padding: 16px 12px 0; }
+  .hero-headline { font-size: clamp(30px, 9vw, 44px); }
+  .hero-sub { font-size: 0.64rem; width: 92%; }
+  .hero .img-cards img { width: 50%; }
+  .hero .img-cards img:nth-child(2) { width: 44%; bottom: -10px; }
+  .proven-section { padding: 32px 10px; }
+  .portfolio-item h3 { font-size: 1.45rem; }
+  .portfolio-item p { font-size: 0.8rem; }
+  .view-portfolio a { font-size: 1rem; }
+  .tag { font-size: 9px; padding: 3px 12px; }
+  .clients-bar { padding: 20px 10px; }
+  .client-logo { width: 86px; }
+  .cta-dark { padding: 38px 14px 22px; }
+  .cta-dark h2 { font-size: 1.75rem; }
+  .cta-dark p { font-size: 0.72rem; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { max-width: 250px; font-size: 0.68rem; padding: 8px 8px 8px 18px; }
+  .cta-btns .btn-icon { width: 30px; height: 30px; }
+  footer { padding: 26px 14px 14px; }
+  .footer-top { gap: 22px; }
+  .region-tag { padding: 4px 10px; font-size: 0.58rem; }
+  .footer-bottom span { font-size: 0.6rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   360px — Galaxy A / smallest phones
+   ────────────────────────────────────────────────────────────── */
+@media screen and (max-width: 360px) {
+  .site-header { width: 98%; height: 54px; }
+  .logo-zone .logo { width: 36px; }
+  .contact-link { font-size: 0.62rem; }
+  .hamburger span:nth-child(1) { width: 20px; }
+  .hamburger span:nth-child(2) { width: 14px; }
+  .hero-overlay { padding-top: 62px; }
+  .hero { padding: 12px 10px 0; }
+  .hero-headline { font-size: clamp(26px, 8.5vw, 38px); line-height: 0.9; }
+  .hero-sub { font-size: 0.58rem; width: 95%; line-height: 1.5; }
+  .hero .img-cards img { width: 52%; }
+  .hero .img-cards img:nth-child(2) { width: 46%; bottom: -8px; }
+  .hero-overlay .blurry-bar { height: 30px; }
+  .proven-section { padding: 28px 8px; }
+  .portfolio-grid { gap: 22px; }
+  .portfolio-item h3 { font-size: 1.3rem; }
+  .portfolio-item p { font-size: 0.76rem; }
+  .tag { font-size: 8.5px; padding: 3px 10px; }
+  .view-portfolio a { font-size: 0.95rem; }
+  .clients-bar { padding: 18px 8px; }
+  .client-logo { width: 76px; }
+  .footer-content-container { border-radius: 18px; }
+  .cta-dark { padding: 32px 12px 18px; }
+  .cta-dark h2 { font-size: 1.55rem; }
+  .cta-dark p { font-size: 0.66rem; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { max-width: 230px; font-size: 0.62rem; padding: 7px 7px 7px 14px; }
+  .cta-btns .btn-icon { width: 28px; height: 28px; }
+  footer { padding: 22px 12px 12px; }
+  .footer-col h4 { font-size: 0.75rem; }
+  .footer-col ul li a { font-size: 0.75rem; }
+  .footer-col .contact-line { font-size: 0.72rem; }
+  .region-tag { padding: 3px 8px; font-size: 0.54rem; }
+  .footer-bottom span { font-size: 0.54rem; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   MOBILE LANDSCAPE  (rotated phone, height ≤ 500px)
+   ────────────────────────────────────────────────────────────── */
+@media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 500px) {
+
+  /* Header */
+  .site-header { height: 54px; width: 94%; }
+  .logo-zone .logo { width: 40px; }
+  .nav-links { display: flex; gap: 14px; padding: 0 10px; }
+  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; }
+  .header-right { gap: 8px; padding: 0 12px 0 0; }
+  .contact-link { font-size: 0.7rem; }
+  .divider { height: 20px; }
+
+  /* Hero — wide layout, lower height */
+  .hero-overlay { padding-top: 62px; }
+  .section-container { border-radius: 14px; }
+  .hero { padding: 24px 28px 0; }
+  .hero-headline {
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 0.85;
+    margin-bottom: 8px;
+  }
+  .hero-sub { font-size: 0.8rem; width: 62%; }
+  .hero .img-cards img { width: 32%; }
+  .hero .img-cards img:nth-child(2) { width: 28%; bottom: -10px; }
+  .hero-overlay .blurry-bar { height: 36px; }
+
+  /* Portfolio — 2-col in landscape */
+  .proven-section { padding: 44px 28px; }
+  .portfolio-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .portfolio-item h3 { font-size: clamp(1.1rem, 3vw, 1.6rem); }
+  .portfolio-item p { font-size: 0.8rem; }
+  .portfolio-item .proj-img { transform: none; }
+  .view-portfolio { padding: 24px 0 10px; }
+  .view-portfolio a { font-size: 1.2rem; }
+
+  /* Clients */
+  .clients-bar { padding: 20px 28px; }
+  .clients-inner { gap: 14px; }
+  .client-logo { width: 110px; }
+
+  /* Footer */
+  .footer-content-container { border-radius: 28px; }
+  .cta-dark { padding: 36px 24px 24px; }
+  .cta-dark h2 { font-size: 1.9rem; }
+  .cta-dark p { max-width: 80%; font-size: 0.76rem; margin-bottom: 18px; }
+  .cta-btns { flex-direction: row; gap: 8px; }
+  .cta-btns .btn-primary,
+  .cta-btns .btn-outline { font-size: 0.7rem; padding: 7px 10px 7px 18px; }
+  .cta-btns .btn-icon { width: 30px; height: 30px; }
+  footer { padding: 28px 22px 16px; }
+  .footer-top { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .footer-logo-wrap { grid-column: 1 / -1; display: flex; }
+  .region-tag { padding: 4px 12px; font-size: 0.64rem; }
+  .footer-bottom { flex-direction: row; justify-content: space-between; }
+  .footer-bottom span { font-size: 0.64rem; }
+}
