@@ -166,10 +166,10 @@ img {
 }
 
 /* Active language code highlights */
-.lang-switch-wrap:not(.fr-active) .lang-code-en { color: #3B686D; }
+.lang-switch-wrap:not(.fr-active) .lang-code-en { color: var(--golden-gradient); }
 .lang-switch-wrap:not(.fr-active) .lang-code-fr { color: #9F9F9F; }
 .lang-switch-wrap.fr-active     .lang-code-en { color: #9F9F9F; }
-.lang-switch-wrap.fr-active     .lang-code-fr { color: #CC5500; }
+.lang-switch-wrap.fr-active     .lang-code-fr { color: #8b6a00; }
 
 /* Hide the real checkbox */
 .lang-pill-wrap {
@@ -190,7 +190,7 @@ img {
 .lang-pill {
     position: absolute;
     inset: 0;
-    background: #3B686D;
+    background: var(--golden-gradient);
     border-radius: 55px;
     cursor: pointer;
     transition: background 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -213,7 +213,7 @@ img {
 
 /* Checked (FR) state */
 .lang-pill-wrap input:checked ~ .lang-pill {
-    background: #CC5500;
+    background: #8b6a00;
 }
 .lang-pill-wrap input:checked ~ .lang-pill .lang-thumb {
     transform: translateX(22px);
