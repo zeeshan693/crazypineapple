@@ -1,7 +1,5 @@
 /* ===== CSS VARIABLES ===== */
 :root {
-    --primary-font: 'Poppins', sans-serif;
-    --secondary-font: 'Playfair Display', serif;
     --golden-gradient: linear-gradient(45deg, #A16C16, #E6B554);
     --text-primary: #181819;
     --gold: #E6B554;
