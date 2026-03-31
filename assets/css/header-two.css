@@ -1,0 +1,416 @@
+
+/**************
+*****************
+*************** Site Header ── 
+****************
+******************/
+
+.site-header {
+    max-width: 1440px;
+    width: 86%;
+    background: transparent;
+    display: flex;
+    align-items: stretch;
+    height: 82px;
+    padding: 0;
+    margin: auto;
+    margin-top: 12px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 555px;
+    z-index: 9999;
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* ── LOGO ZONE ── */
+.logo-zone {
+    display: flex;
+    align-items: center;
+    padding: 0 24px 0 20px;
+    flex-shrink: 0;
+}
+
+.logo-zone .logo img {
+    width: 100%;
+    height: auto;
+}
+
+.logo-zone .logo {
+    width: 70px;
+    height: auto;
+}
+
+/* ── HOME TAB (gold slab) ── */
+.nav-home-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.nav-home-tab a {
+    background: var(--golden-gradient);
+    padding: 30px 10px;
+    border-radius: 0 0 10px 10px;
+    font-family: var(--primary-font);
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    height: 100%;
+}
+
+/* ── MAIN NAV ── */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding: 0 32px;
+    flex: 1;
+}
+
+.nav-links a {
+    font-family: var(--primary-font);
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--text-color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.2s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold-mid);
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold-mid);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ── RIGHT SIDE ── */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 24px;
+    flex-shrink: 0;
+}
+
+/* contact us link */
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--primary-font);
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-color-primary);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--text-color-primary);
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-link:hover {
+    color: var(--gold-mid);
+    border-color: var(--gold-mid);
+}
+
+.contact-link .arrow {
+    color: var(--gold-mid);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    transition: transform 0.2s;
+}
+
+.contact-link:hover .arrow {
+    transform: translate(2px, -2px);
+}
+
+/* divider */
+.divider {
+    width: 1px;
+    height: 32px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* hamburger */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    background: var(--text-color-primary);
+    transition: background 0.2s;
+}
+
+.hamburger span:nth-child(1) {
+    width: 28px;
+}
+
+.hamburger span:nth-child(2) {
+    width: 20px;
+}
+
+.hamburger:hover span {
+    background: var(--gold-mid);
+}
+
+/* ============================================================
+   ABOUT-US-RESPONSIVE.CSS — Group Crazy Pineapple Inc
+   Breakpoints: 360 | 390 | 410 | 430 | 768 landscape |
+                tablet portrait (431–1023) | tablet landscape (768–1199)
+   ============================================================ */
+
+/* ─────────────────────────────────────────────
+   GLOBAL MOBILE HELPERS  (≤ 1023px)
+   ───────────────────────────────────────────── */
+@media (max-width: 1023px) {
+    /* nothing here for now */
+}
+
+/* ─────────────────────────────────────────────
+   SHARED MOBILE BASE  (≤ 430px)
+   Covers 360 / 390 / 410 / 430
+   ───────────────────────────────────────────── */
+@media (max-width: 430px) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 92%;
+    height: 60px;
+    margin-top: 8px;
+    border-radius: 999px;
+    padding: 0 14px;
+  }
+
+  .logo-zone {
+    padding: 0 10px 0 6px;
+  }
+
+  .logo-zone .logo {
+    width: 40px;
+  }
+
+  .nav-links {
+    display: none;         /* hidden behind hamburger */
+  }
+
+  .contact-link {
+    display: none;         /* too tight on mobile */
+  }
+
+  .header-right {
+    margin-left: auto;
+    padding: 0 6px;
+    gap: 10px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   360px — Narrowest phones
+   ───────────────────────────────────────────── */
+@media (max-width: 360px) {
+
+  .site-header {
+    width: 94%;
+    height: 56px;
+    margin-top: 6px;
+  }
+
+  .logo-zone .logo {
+    width: 34px;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   390px — iPhone 14 / Pixel 7
+   ───────────────────────────────────────────── */
+@media (min-width: 361px) and (max-width: 390px) {
+
+    /* nothing for now */
+
+}
+
+/* ─────────────────────────────────────────────
+   410px — Mid-range Androids
+   ───────────────────────────────────────────── */
+@media (min-width: 391px) and (max-width: 410px) {
+
+    /* nothing here for now */
+
+}
+
+/* ─────────────────────────────────────────────
+   430px — iPhone 15 Pro Max / large Androids
+   ───────────────────────────────────────────── */
+@media (min-width: 411px) and (max-width: 430px) {
+
+    /* nothing here for now */
+
+}
+
+/* ─────────────────────────────────────────────
+   768px LANDSCAPE — phones rotated
+   Detected via short height + landscape orientation
+   ───────────────────────────────────────────── */
+@media (max-height: 500px) and (min-width: 600px) and (orientation: landscape) {
+
+  /* Header */
+  .site-header {
+    width: 88%;
+    height: 54px;
+    margin-top: 6px;
+  }
+
+  .logo-zone .logo {
+    width: 38px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 18px;
+    padding: 0 14px;
+  }
+
+  .nav-links a {
+    font-size: 0.78rem;
+  }
+
+  .contact-link {
+    display: flex;
+    font-size: 0.78rem;
+  }
+
+  .divider {
+    display: block;
+  }
+
+
+}
+
+/* ─────────────────────────────────────────────
+   TABLET PORTRAIT  (431px – 1023px, portrait)
+   ───────────────────────────────────────────── */
+@media (min-width: 431px) and (max-width: 1023px) and (orientation: portrait) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 90%;
+    height: 68px;
+    margin-top: 10px;
+  }
+
+  .logo-zone .logo {
+    width: 54px;
+  }
+
+  .nav-links {
+    display: none;          /* hamburger still handles this */
+  }
+
+  .contact-link {
+    font-size: 0.88rem;
+  }
+
+  .divider {
+    display: block;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   768px PORTRAIT REFINEMENT
+   Larger iPads in portrait get extra polish
+   ───────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+
+  .site-header {
+    width: 88%;
+    height: 72px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 22px;
+    padding: 0 18px;
+  }
+
+  .nav-links a {
+    font-size: 0.88rem;
+  }
+
+  .contact-link {
+    display: flex;
+    font-size: 0.88rem;
+  }
+
+}
+
+/* ─────────────────────────────────────────────
+   TABLET LANDSCAPE  (768px – 1199px, landscape)
+   iPads rotated, Surface Pro, small laptops
+   ───────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
+
+  /* ── Header ── */
+  .site-header {
+    width: 88%;
+    height: 74px;
+    margin-top: 12px;
+  }
+
+  .logo-zone .logo {
+    width: 58px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    padding: 0 20px;
+  }
+
+  .nav-links a {
+    font-size: 0.92rem;
+  }
+
+  .contact-link {
+    display: flex;
+    font-size: 0.92rem;
+  }
+
+}

@@ -4,192 +4,6 @@ body {
     background-color: #ffffff;
 }
 
-
-/**************
-*****************
-*************** Site Header ── 
-****************
-******************/
-
-.site-header {
-    max-width: 1440px;
-    width: 86%;
-    background: transparent;
-    display: flex;
-    align-items: stretch;
-    height: 82px;
-    padding: 0;
-    margin: auto;
-    margin-top: 12px;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border-radius: 555px;
-    z-index: 9999;
-    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.08);
-}
-
-/* ── LOGO ZONE ── */
-.logo-zone {
-    display: flex;
-    align-items: center;
-    padding: 0 24px 0 20px;
-    flex-shrink: 0;
-}
-
-.logo-zone .logo img {
-    width: 100%;
-    height: auto;
-}
-
-.logo-zone .logo {
-    width: 70px;
-    height: auto;
-}
-
-/* ── HOME TAB (gold slab) ── */
-.nav-home-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.nav-home-tab a {
-    background: var(--golden-gradient);
-    padding: 30px 10px;
-    border-radius: 0 0 10px 10px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    height: 100%;
-}
-
-/* ── MAIN NAV ── */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    padding: 0 32px;
-    flex: 1;
-}
-
-.nav-links a {
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.2s;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold-mid);
-    transition: width 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: var(--gold-mid);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* ── RIGHT SIDE ── */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 24px;
-    flex-shrink: 0;
-}
-
-/* contact us link */
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--text-color-primary);
-    padding-bottom: 1px;
-    transition: color 0.2s, border-color 0.2s;
-}
-
-.contact-link:hover {
-    color: var(--gold-mid);
-    border-color: var(--gold-mid);
-}
-
-.contact-link .arrow {
-    color: var(--gold-mid);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    transition: transform 0.2s;
-}
-
-.contact-link:hover .arrow {
-    transform: translate(2px, -2px);
-}
-
-/* divider */
-.divider {
-    width: 1px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-/* hamburger */
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.hamburger span {
-    display: block;
-    height: 2px;
-    background: var(--text-color-primary);
-    transition: background 0.2s;
-}
-
-.hamburger span:nth-child(1) {
-    width: 28px;
-}
-
-.hamburger span:nth-child(2) {
-    width: 20px;
-}
-
-.hamburger:hover span {
-    background: var(--gold-mid);
-}
-
 /**************
 *****************
 *************** hero-section ── 
@@ -409,46 +223,6 @@ body {
    SHARED MOBILE BASE  (≤ 430px — all small phones)
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 430px) {
-
-  /* ── Header ── */
-  .site-header {
-    width: 92%;
-    height: 64px;
-    margin-top: 8px;
-    border-radius: 100px;
-    padding: 0 4px;
-  }
-
-  .logo-zone {
-    padding: 0 10px 0 12px;
-  }
-
-  .logo-zone .logo {
-    width: 46px;
-  }
-
-  .nav-links {
-    display: none; /* collapsed on mobile */
-  }
-
-  .header-right {
-    gap: 10px;
-    padding: 0 14px 0 0;
-  }
-
-  .contact-link {
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    gap: 4px;
-  }
-
-  .divider {
-    height: 22px;
-  }
-
-  .hamburger span:nth-child(1) { width: 22px; }
-  .hamburger span:nth-child(2) { width: 16px; }
-
   /* ── Hero ── */
   .hero-section {
     height: auto;
@@ -543,17 +317,6 @@ body {
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 360px) {
 
-  .site-header {
-    width: 94%;
-    height: 58px;
-  }
-
-  .logo-zone .logo { width: 40px; }
-
-  .contact-link {
-    font-size: 0.68rem;
-  }
-
   .hero-section .hero-image {
     height: 420px;
   }
@@ -627,26 +390,6 @@ body {
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 431px) and (max-width: 768px) {
 
-  /* ── Header ── */
-  .site-header {
-    width: 92%;
-    height: 70px;
-    margin-top: 10px;
-  }
-
-  .logo-zone .logo { width: 54px; }
-
-  .nav-links {
-    display: none;
-  }
-
-  .header-right {
-    gap: 14px;
-    padding: 0 18px 0 0;
-  }
-
-  .contact-link { font-size: 0.82rem; }
-
   /* ── Hero ── */
   .hero-section {
     height: auto;
@@ -718,27 +461,6 @@ body {
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-  /* ── Header ── */
-  .site-header {
-    width: 90%;
-    height: 72px;
-  }
-
-  .logo-zone .logo { width: 60px; }
-
-  .nav-links {
-    display: flex;
-    gap: 20px;
-    padding: 0 16px;
-  }
-
-  .nav-links a {
-    font-size: 0.85rem;
-    letter-spacing: 0.07em;
-  }
-
-  .contact-link { font-size: 0.85rem; }
-
   /* ── Hero ── */
   .hero-section {
     height: auto;
@@ -808,21 +530,6 @@ body {
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
 
-  /* ── Header ── */
-  .site-header {
-    width: 88%;
-    height: 76px;
-  }
-
-  .nav-links {
-    gap: 24px;
-    padding: 0 24px;
-  }
-
-  .nav-links a { font-size: 0.95rem; }
-
-  .contact-link { font-size: 0.95rem; }
-
   /* ── Hero ── */
   .hero-section {
     height: auto;
@@ -859,26 +566,6 @@ body {
    Using orientation media query for phones up to ~900px wide
    ────────────────────────────────────────────────────────────── */
 @media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 500px) {
-
-  /* ── Header ── */
-  .site-header {
-    height: 58px;
-    width: 92%;
-  }
-
-  .logo-zone .logo { width: 42px; }
-
-  .nav-links {
-    display: flex;
-    gap: 16px;
-    padding: 0 12px;
-  }
-
-  .nav-links a { font-size: 0.72rem; letter-spacing: 0.06em; }
-
-  .contact-link { font-size: 0.72rem; letter-spacing: 0.06em; }
-
-  .header-right { gap: 10px; padding: 0 14px 0 0; }
 
   /* ── Hero ── */
   .hero-section {

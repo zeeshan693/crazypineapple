@@ -9,159 +9,9 @@
     --gray-bg: #F8F8F8;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: #F8F8F8;
     font-family: var(--primary-font);
-}
-
-/* ===== SITE HEADER ===== */
-.site-header {
-    max-width: 1440px;
-    width: 86%;
-    display: flex;
-    align-items: stretch;
-    height: 82px;
-    padding: 0;
-    margin: auto;
-    margin-top: 12px;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border-radius: 555px;
-    z-index: 9999;
-    box-shadow: 0 8px 50px 0 rgba(0,0,0,0.08);
-}
-
-.logo-zone {
-    display: flex;
-    align-items: center;
-    padding: 0 24px 0 20px;
-    flex-shrink: 0;
-}
-
-.logo-zone .logo {
-    width: 70px;
-}
-
-.logo-zone .logo img {
-    width: 100%;
-    height: auto;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    padding: 0 32px;
-    flex: 1;
-}
-
-.nav-links a {
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: var(--text-primary);
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.2s;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold-mid);
-    transition: width 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: var(--gold-mid);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 24px;
-    flex-shrink: 0;
-}
-
-.contact-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-primary);
-    text-decoration: underline;
-    text-decoration-thickness: 1.5px;
-    text-underline-offset: 7px;
-}
-
-.contact-link:hover {
-    color: var(--gold-mid);
-}
-
-.contact-link .arrow {
-    color: var(--gold-mid);
-    font-size: 14px;
-    transition: transform 0.2s;
-}
-
-.contact-link:hover .arrow {
-    transform: translate(2px, -2px);
-}
-
-.divider {
-    width: 1px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.hamburger span {
-    display: block;
-    height: 2px;
-    background: var(--text-primary);
-}
-
-.hamburger span:nth-child(1) {
-    width: 28px;
-}
-
-.hamburger span:nth-child(2) {
-    width: 20px;
-}
-
-.hamburger:hover span {
-    background: var(--gold-mid);
 }
 
 /* ===== HERO SECTION with bg-ad.jpg (opacity 0.8) ===== */
@@ -782,25 +632,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .site-header {
-        width: 96%;
-        border-radius: 40px;
-        height: 70px;
-    }
-    .nav-links {
-        gap: 16px;
-        padding: 0 12px;
-    }
-    .nav-links a {
-        font-size: 0.8rem;
-    }
-    .header-right {
-        gap: 8px;
-        padding: 0 12px;
-    }
-    .contact-link {
-        font-size: 0.75rem;
-    }
     .hero-modern {
         padding-top: 85px;
     }
@@ -851,12 +682,6 @@ body {
 }
 
 @media (max-width: 410px) {
-    .nav-links {
-        display: none;
-    }
-    .contact-link {
-        font-size: 0.7rem;
-    }
     .hero-text-col h1 {
         font-size: 2rem;
     }
@@ -884,40 +709,6 @@ body {
    Covers 360 / 390 / 410 / 430
    ───────────────────────────────────────────── */
 @media (max-width: 430px) {
-
-  /* ── Header ── */
-  .site-header {
-    width: 92%;
-    height: 58px;
-    margin-top: 8px;
-    border-radius: 999px;
-  }
-
-  .logo-zone {
-    padding: 0 10px 0 14px;
-  }
-
-  .logo-zone .logo {
-    width: 38px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .contact-link {
-    display: none;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .header-right {
-    margin-left: auto;
-    padding: 0 14px 0 0;
-    gap: 10px;
-  }
 
   /* ── Hero ── */
   .hero-modern {
@@ -1218,16 +1009,6 @@ body {
    ───────────────────────────────────────────── */
 @media (max-width: 360px) {
 
-  .site-header {
-    width: 94%;
-    height: 54px;
-    margin-top: 6px;
-  }
-
-  .logo-zone .logo {
-    width: 32px;
-  }
-
   .hero-modern {
     padding-top: 68px;
   }
@@ -1397,41 +1178,6 @@ body {
    Short viewport height, wider width
    ───────────────────────────────────────────── */
 @media (max-height: 500px) and (min-width: 600px) and (orientation: landscape) {
-
-  /* Header */
-  .site-header {
-    width: 88%;
-    height: 52px;
-    margin-top: 6px;
-  }
-
-  .logo-zone .logo {
-    width: 36px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 18px;
-    padding: 0 12px;
-  }
-
-  .nav-links a {
-    font-size: 0.76rem;
-  }
-
-  .contact-link {
-    display: inline-flex;
-    font-size: 0.76rem;
-  }
-
-  .divider {
-    display: block;
-  }
-
-  .header-right {
-    padding: 0 14px;
-    gap: 10px;
-  }
 
   /* Hero */
   .hero-modern {
@@ -1620,30 +1366,6 @@ body {
    TABLET PORTRAIT  (431px – 1023px, portrait)
    ───────────────────────────────────────────── */
 @media (min-width: 431px) and (max-width: 1023px) and (orientation: portrait) {
-
-  /* ── Header ── */
-  .site-header {
-    width: 90%;
-    height: 68px;
-    margin-top: 10px;
-  }
-
-  .logo-zone .logo {
-    width: 52px;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .contact-link {
-    font-size: 0.88rem;
-  }
-
-  .header-right {
-    padding: 0 20px;
-    gap: 14px;
-  }
 
   /* ── Hero ── */
   .hero-modern {
@@ -1849,30 +1571,6 @@ body {
    ───────────────────────────────────────────── */
 @media (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
 
-  .site-header {
-    width: 88%;
-    height: 74px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 22px;
-    padding: 0 18px;
-  }
-
-  .nav-links a {
-    font-size: 0.86rem;
-  }
-
-  .contact-link {
-    display: inline-flex;
-    font-size: 0.86rem;
-  }
-
-  .divider {
-    display: block;
-  }
-
   .hero-modern {
     padding-top: 96px;
   }
@@ -1938,32 +1636,6 @@ body {
    iPad landscape, Surface Pro, small laptops
    ───────────────────────────────────────────── */
 @media (min-width: 768px) and (max-width: 1199px) and (orientation: landscape) {
-
-  /* ── Header ── */
-  .site-header {
-    width: 88%;
-    height: 74px;
-    margin-top: 12px;
-  }
-
-  .logo-zone .logo {
-    width: 58px;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    padding: 0 20px;
-  }
-
-  .nav-links a {
-    font-size: 0.9rem;
-  }
-
-  .contact-link {
-    display: inline-flex;
-    font-size: 0.9rem;
-  }
 
   /* ── Hero ── */
   .hero-modern {

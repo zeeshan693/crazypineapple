@@ -6,192 +6,6 @@ body {
 
 /**************
 *****************
-*************** Site Header ── 
-****************
-******************/
-
-.site-header {
-    max-width: 1440px;
-    width: 86%;
-    background: transparent;
-    display: flex;
-    align-items: stretch;
-    height: 82px;
-    padding: 0;
-    margin: auto;
-    margin-top: 12px;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff;
-    border-radius: 555px;
-    z-index: 9999;
-    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.08);
-}
-
-/* ── LOGO ZONE ── */
-.logo-zone {
-    display: flex;
-    align-items: center;
-    padding: 0 24px 0 20px;
-    flex-shrink: 0;
-}
-
-.logo-zone .logo img {
-    width: 100%;
-    height: auto;
-}
-
-.logo-zone .logo {
-    width: 70px;
-    height: auto;
-}
-
-/* ── HOME TAB (gold slab) ── */
-.nav-home-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.nav-home-tab a {
-    background: var(--golden-gradient);
-    padding: 30px 10px;
-    border-radius: 0 0 10px 10px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    height: 100%;
-}
-
-/* ── MAIN NAV ── */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    padding: 0 32px;
-    flex: 1;
-}
-
-.nav-links a {
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.2s;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold-mid);
-    transition: width 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: var(--gold-mid);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* ── RIGHT SIDE ── */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 24px;
-    flex-shrink: 0;
-}
-
-/* contact us link */
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--text-color-primary);
-    padding-bottom: 1px;
-    transition: color 0.2s, border-color 0.2s;
-}
-
-.contact-link:hover {
-    color: var(--gold-mid);
-    border-color: var(--gold-mid);
-}
-
-.contact-link .arrow {
-    color: var(--gold-mid);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    transition: transform 0.2s;
-}
-
-.contact-link:hover .arrow {
-    transform: translate(2px, -2px);
-}
-
-/* divider */
-.divider {
-    width: 1px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-/* hamburger */
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.hamburger span {
-    display: block;
-    height: 2px;
-    background: var(--text-color-primary);
-    transition: background 0.2s;
-}
-
-.hamburger span:nth-child(1) {
-    width: 28px;
-}
-
-.hamburger span:nth-child(2) {
-    width: 20px;
-}
-
-.hamburger:hover span {
-    background: var(--gold-mid);
-}
-
-
-/**************
-*****************
 *************** HERO ── 
 ****************
 ******************/
@@ -842,13 +656,6 @@ body {
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
 
-  /* Header */
-  .site-header { width: 90%; height: 76px; }
-  .logo-zone .logo { width: 62px; }
-  .nav-links { gap: 24px; padding: 0 20px; }
-  .nav-links a { font-size: 0.95rem; }
-  .contact-link { font-size: 0.95rem; }
-
   /* Hero */
   .hero-overlay { padding-top: 96px; }
   .hero { padding: 48px 48px 0; }
@@ -872,14 +679,6 @@ body {
    TABLET PORTRAIT  (769px – 1024px)
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
-  /* Header */
-  .site-header { width: 92%; height: 72px; }
-  .logo-zone .logo { width: 56px; }
-  .nav-links { gap: 18px; padding: 0 16px; }
-  .nav-links a { font-size: 0.85rem; letter-spacing: 0.07em; }
-  .header-right { gap: 12px; padding: 0 16px; }
-  .contact-link { font-size: 0.85rem; }
 
   /* Hero */
   .hero-overlay { padding-top: 88px; }
@@ -910,22 +709,6 @@ body {
    SHARED MOBILE BASE  (≤ 430px)
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 430px) {
-
-  /* Header */
-  .site-header {
-    width: 94%;
-    height: 60px;
-    margin-top: 8px;
-    border-radius: 100px;
-  }
-  .logo-zone { padding: 0 10px 0 12px; }
-  .logo-zone .logo { width: 44px; }
-  .nav-links { display: none; }
-  .header-right { gap: 10px; padding: 0 12px 0 0; margin-left: auto; }
-  .contact-link { font-size: 0.72rem; letter-spacing: 0.07em; gap: 4px; }
-  .divider { height: 22px; }
-  .hamburger span:nth-child(1) { width: 22px; }
-  .hamburger span:nth-child(2) { width: 16px; }
 
   /* Hero section */
   .hero-section { margin: 0 6px; }
@@ -983,7 +766,6 @@ body {
    410px — Pixel 7 / Galaxy S23
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 410px) {
-  .site-header { width: 96%; height: 58px; }
   .hero-headline { font-size: clamp(34px, 9.5vw, 48px); }
   .hero-sub { font-size: 0.68rem; width: 90%; }
   .hero .img-cards img { width: 48%; }
@@ -999,8 +781,6 @@ body {
    390px — iPhone 14/15 Pro
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 390px) {
-  .logo-zone .logo { width: 40px; }
-  .contact-link { font-size: 0.68rem; }
   .hero-overlay { padding-top: 68px; }
   .hero { padding: 16px 12px 0; }
   .hero-headline { font-size: clamp(30px, 9vw, 44px); }
@@ -1027,11 +807,6 @@ body {
    360px — Galaxy A / smallest phones
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 360px) {
-  .site-header { width: 98%; height: 54px; }
-  .logo-zone .logo { width: 36px; }
-  .contact-link { font-size: 0.62rem; }
-  .hamburger span:nth-child(1) { width: 20px; }
-  .hamburger span:nth-child(2) { width: 14px; }
   .hero-overlay { padding-top: 62px; }
   .hero { padding: 12px 10px 0; }
   .hero-headline { font-size: clamp(26px, 8.5vw, 38px); line-height: 0.9; }
@@ -1054,15 +829,6 @@ body {
    MOBILE LANDSCAPE  (rotated phone, height ≤ 500px)
    ────────────────────────────────────────────────────────────── */
 @media screen and (orientation: landscape) and (max-width: 900px) and (max-height: 500px) {
-
-  /* Header */
-  .site-header { height: 54px; width: 94%; }
-  .logo-zone .logo { width: 40px; }
-  .nav-links { display: flex; gap: 14px; padding: 0 10px; }
-  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; }
-  .header-right { gap: 8px; padding: 0 12px 0 0; }
-  .contact-link { font-size: 0.7rem; }
-  .divider { height: 20px; }
 
   /* Hero — wide layout, lower height */
   .hero-overlay { padding-top: 62px; }
