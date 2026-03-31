@@ -5,174 +5,6 @@ body {
 }
 
 /* ─────────────────────────────────────────
-   SITE HEADER
-───────────────────────────────────────── */
-
-.site-header {
-    width: 100%;
-    max-width: 1440px;
-    background: transparent;
-    display: flex;
-    align-items: stretch;
-    height: 82px;
-    position: relative;
-    padding: 0 60px;
-    margin: auto;
-}
-
-/* Logo Zone */
-.logo-zone {
-    display: flex;
-    align-items: center;
-    padding: 0 24px 0 20px;
-    flex-shrink: 0;
-}
-
-.logo-zone .logo {
-    width: 70px;
-    height: auto;
-}
-
-.logo-zone .logo img {
-    width: 100%;
-    height: auto;
-}
-
-/* Home Tab */
-.nav-home-tab {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-}
-
-.nav-home-tab a {
-    background: var(--golden-gradient);
-    padding: 30px 10px;
-    border-radius: 0 0 10px 10px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    height: 100%;
-}
-
-/* Nav Links */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    padding: 0 32px;
-    flex: 1;
-}
-
-.nav-links a {
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 2px;
-    transition: color 0.2s;
-}
-
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold-mid);
-    transition: width 0.25s ease;
-}
-
-.nav-links a:hover {
-    color: var(--gold-mid);
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* Header Right */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding: 0 24px;
-    flex-shrink: 0;
-}
-
-.contact-link {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--primary-font);
-    font-size: clamp(1rem, 4vw, 1.2rem);
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--text-color-primary);
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--text-color-primary);
-    padding-bottom: 1px;
-    transition: color 0.2s, border-color 0.2s;
-}
-
-.contact-link:hover {
-    color: var(--gold-mid);
-    border-color: var(--gold-mid);
-}
-
-.contact-link .arrow {
-    color: var(--gold-mid);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    transition: transform 0.2s;
-}
-
-.contact-link:hover .arrow {
-    transform: translate(2px, -2px);
-}
-
-.divider {
-    width: 1px;
-    height: 32px;
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-}
-
-.hamburger span {
-    display: block;
-    height: 2px;
-    background: var(--text-color-primary);
-    transition: background 0.2s;
-}
-
-.hamburger span:nth-child(1) { width: 28px; }
-.hamburger span:nth-child(2) { width: 20px; }
-
-.hamburger:hover span {
-    background: var(--gold-mid);
-}
-
-/* ─────────────────────────────────────────
    HERO
 ───────────────────────────────────────── */
 
@@ -551,13 +383,6 @@ body {
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
 
-  /* Header */
-  .site-header { padding: 0 40px; height: 76px; }
-  .logo-zone .logo { width: 62px; }
-  .nav-links { gap: 24px; padding: 0 20px; }
-  .nav-links a { font-size: 0.95rem; }
-  .contact-link { font-size: 0.95rem; }
-
   /* Animating logo */
   .animating-logo { width: 38% !important; }
 
@@ -586,16 +411,6 @@ body {
    TABLET PORTRAIT  (769px – 1024px)
    ────────────────────────────────────────────────────────────── */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-
-  /* Header */
-  .site-header { padding: 0 28px; height: 72px; }
-  .logo-zone .logo { width: 56px; }
-  .nav-home-tab a { font-size: 0.85rem; padding: 24px 8px; }
-  .nav-links { gap: 18px; padding: 0 14px; }
-  .nav-links a { font-size: 0.82rem; letter-spacing: 0.07em; }
-  .header-right { gap: 12px; padding: 0 14px; }
-  .contact-link { font-size: 0.82rem; }
-  .divider { height: 26px; }
 
   /* Animating logo */
   .animating-logo { width: 50% !important; }
@@ -639,18 +454,6 @@ body {
 
   /* Animating logo */
   .animating-logo { display: none !important; }
-
-  /* Header */
-  .site-header { padding: 0 10px; height: 58px; }
-  .logo-zone { padding: 0 8px 0 10px; }
-  .logo-zone .logo { width: 42px; }
-  .nav-home-tab { display: none; }
-  .nav-links { display: none; }
-  .header-right { gap: 8px; padding: 0 10px 0 0; margin-left: auto; }
-  .contact-link { font-size: 0.68rem; letter-spacing: 0.06em; gap: 3px; }
-  .divider { height: 20px; }
-  .hamburger span:nth-child(1) { width: 22px; }
-  .hamburger span:nth-child(2) { width: 16px; }
 
   /* Hero */
   .section-container { border-radius: 14px; margin: 0 6px; }
@@ -775,8 +578,6 @@ body {
    410px — Pixel 7 / Galaxy S23
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 410px) {
-  .site-header { height: 56px; }
-  .logo-zone .logo { width: 40px; }
   .hero-headline { font-size: clamp(30px, 9vw, 44px); }
   .hero-pill { height: 52px; }
   .hero-pill img { width: 74px; }
@@ -794,7 +595,6 @@ body {
    390px — iPhone 14/15 Pro
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 390px) {
-  .logo-zone .logo { width: 37px; }
   .contact-link { font-size: 0.62rem; }
   .hero { padding: 14px 10px 0; }
   .hero-headline { font-size: clamp(27px, 8.5vw, 40px); }
@@ -820,12 +620,6 @@ body {
    360px — Galaxy A / smallest phones
    ────────────────────────────────────────────────────────────── */
 @media screen and (max-width: 360px) {
-  .site-header { height: 52px; padding: 0 6px; }
-  .logo-zone .logo { width: 33px; }
-  .contact-link { font-size: 0.56rem; }
-  .hamburger span:nth-child(1) { width: 20px; }
-  .hamburger span:nth-child(2) { width: 14px; }
-  .section-container { margin: 0 4px; border-radius: 12px; }
   .hero { padding: 10px 8px 0; }
   .hero-headline { font-size: clamp(24px, 8vw, 34px); gap: 3px 6px; }
   .hero-pill { height: 42px; border-radius: 8px; }
@@ -853,16 +647,6 @@ body {
 
   /* Animating logo — hide to save space */
   .animating-logo { display: none !important; }
-
-  /* Header */
-  .site-header { padding: 0 20px; height: 52px; }
-  .logo-zone .logo { width: 38px; }
-  .nav-home-tab a { font-size: 0.7rem; padding: 20px 8px; }
-  .nav-links { display: flex; gap: 14px; padding: 0 10px; }
-  .nav-links a { font-size: 0.7rem; letter-spacing: 0.05em; }
-  .header-right { gap: 8px; padding: 0 12px 0 0; }
-  .contact-link { font-size: 0.7rem; }
-  .divider { height: 18px; }
 
   /* Hero — compact horizontal layout */
   .section-container { border-radius: 14px; margin: 0 6px; }
