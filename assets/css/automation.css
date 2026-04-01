@@ -107,7 +107,6 @@ body {
 
 .heading-para h2 .deliver {
     background: var(--golden-gradient);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: fit-content;
     padding: 0 8px;
