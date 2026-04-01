@@ -536,6 +536,18 @@ body {
     margin-bottom: 8px;
 }
 
+a.portfolio-item{
+    text-decoration: none;
+}
+
+.portfolio-item:hover h3{
+    background: var(--golden-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
 .portfolio-item p {
     font-size: clamp(0.8rem, 5vw, 1rem);
     color: var(--text-secondary);
