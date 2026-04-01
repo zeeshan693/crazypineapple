@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À propos de nous</title>
+    <title>À propos</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../assets/css/about-us.css">
     <link rel="stylesheet" href="../assets/css/header-two.css">
@@ -22,8 +22,26 @@
         <!-- NAV LINKS -->
         <nav class="nav-links">
             <a href="/fr/homepage.html">Accueil</a>
-            <a href="/fr/services.html">Services</a>
+            <div class="nav-item has-dropdown">
+                <a href="/fr/services.html">
+                    Services
+                    <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                        viewBox="0 0 10 10" fill="none">
+                        <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <ul class="nav-dropdown">
+                    <li><a href="/fr/automation.html">Automatisation</a></li>
+                    <li><a href="/fr/custom-software-and-ai.html">Software personnalisé & IA</a></li>
+                    <li><a href="/fr/application-design.html">Conception d'application</a></li>
+                    <li><a href="/fr/web-development.html">Développement web</a></li>
+                    <li><a href="/fr/marketing.html">Marketing</a></li>
+                    <li><a href="/fr/ui-ux-design.html">UI & UX Design</a></li>
+                </ul>
+            </div>
             <a href="/fr/portfolio.html">Portfolio</a>
+            <a href="/fr/about-us.html">À propos</a>
         </nav>
 
         <!-- RIGHT: CONTACT + DIVIDER + HAMBURGER -->

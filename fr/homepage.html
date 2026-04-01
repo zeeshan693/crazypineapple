@@ -18,7 +18,7 @@
 
     <div class="img-container" style="max-width: 1440px; margin: auto;">
         <img src="../assets/images/site-logo-large.png" alt="logo du site" class="animating-logo"
-        style="position: fixed; opacity: 0.2; left: 50%; transform: translateX(-50%); top: 20px; width: 45%;">
+            style="position: fixed; opacity: 0.2; left: 50%; transform: translateX(-50%); top: 20px; width: 45%;">
     </div>
 
     <!-- ── HERO SECTION ── -->
@@ -40,8 +40,26 @@
 
                     <!-- NAV LINKS -->
                     <nav class="nav-links">
-                        <a href="/fr/services.html">Services</a>
+                        <div class="nav-item has-dropdown">
+                            <a href="/fr/services.html">
+                                Services
+                                <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                    viewBox="0 0 10 10" fill="none">
+                                    <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                            <ul class="nav-dropdown">
+                                <li><a href="/fr/automation.html">Automatisation</a></li>
+                                <li><a href="/fr/custom-software-and-ai.html">Software personnalisé & IA</a></li>
+                                <li><a href="/fr/application-design.html">Conception d'application</a></li>
+                                <li><a href="/fr/web-development.html">Développement web</a></li>
+                                <li><a href="/fr/marketing.html">Marketing</a></li>
+                                <li><a href="/fr/ui-ux-design.html">UI & UX Design</a></li>
+                            </ul>
+                        </div>
                         <a href="/fr/portfolio.html">Portfolio</a>
+                        <a href="/fr/about-us.html">À propos</a>
                     </nav>
 
                     <!-- RIGHT: CONTACT + DIVIDER + HAMBURGER -->
@@ -51,93 +69,94 @@
                             <span class="arrow"><img src="../assets/icons/contact-us-arrow-icon.svg" alt=""></span>
                         </a>
                         <div class="divider"></div>
-                        
+
                         <!-- Language Switcher (desktop) -->
                         <div class="lang-switch-wrap">
                             <label class="lang-switch" for="langToggle" aria-label="Sélecteur de langue">
-                            <span class="lang-code lang-code-en">EN</span>
-                            <div class="lang-pill-wrap">
-                                <input type="checkbox" id="langToggle">
-                                <span class="lang-pill"><span class="lang-thumb"></span></span>
-                            </div>
-                            <span class="lang-code lang-code-fr">FR</span>
+                                <span class="lang-code lang-code-en">EN</span>
+                                <div class="lang-pill-wrap">
+                                    <input type="checkbox" id="langToggle">
+                                    <span class="lang-pill"><span class="lang-thumb"></span></span>
+                                </div>
+                                <span class="lang-code lang-code-fr">FR</span>
                             </label>
                             <span class="lang-current-text">Français</span>
                         </div>
 
-                        </div>
-                        <div class="hamburger" role="button" aria-label="Menu">
-                            <span></span>
-                            <span></span>
-                        </div>
                     </div>
-
-                </header>
-                <div class="hero">
-                    <div class="hero-tag">
-                        <span>Québec, Canada</span>
-                        <span class="sep">|</span>
-                        <span>Logiciel</span>
-                        <span class="sep">|</span>
-                        <span>IA</span>
-                        <span class="sep">|</span>
-                        <span>Conseil</span>
+                    <div class="hamburger" role="button" aria-label="Menu">
+                        <span></span>
+                        <span></span>
                     </div>
+            </div>
 
-                    <h1 class="hero-headline">
-                        <div class="first-line">
-                            <span class="text">
-                                <div class="text-group">Groupe</div>
-                            </span>
-                            <!-- Pill with icon -->
-                            <span class="hero-pill">
-                                <img src="../assets/images/group-crazy-img.png" alt="image 1" class="image-1">
-                                <img src="../assets/images/group-crazy-img.png" alt="image 2" class="image-2">
-                            </span>
-                            <span class="text">
-                                <div class="gold text-crazy">Crazy</div>
-                            </span>
-                        </div>
-                        <div class="second-line">
-                            <span class="text">
-                                <div class="text-pineapple">Pineapple</div>
-                            </span>
-                            <!-- Quebec badge -->
-                            <span class="hero-badge">
-                                <div class="hero-badge-company-images">
-                                    <img src="../assets/images/pineapple-inc-img.png" alt="pineapple-inc-img"
-                                        class="c-image-1">
-                                    <img src="../assets/images/company-logo-2.png" alt="pineapple-inc-img"
-                                        class="img c-image-2">
-                                    <img src="../assets/images/company-logo-3.png" alt="pineapple-inc-img"
-                                        class="img c-image-3">
-                                    <img src="../assets/images/company-logo-4.png" alt="pineapple-inc-img"
-                                        class="img c-image-4">
-                                    <img src="../assets/images/company-logo-5.png" alt="pineapple-inc-img"
-                                        class="img c-image-5">
-                                </div>
-                            </span>
-                            <span class="text">
-                                <div class="text-inc">Inc</div>
-                            </span>
-                        </div>
-                    </h1>
+            </header>
+            <div class="hero">
+                <div class="hero-tag">
+                    <span>Québec, Canada</span>
+                    <span class="sep">|</span>
+                    <span>Logiciel</span>
+                    <span class="sep">|</span>
+                    <span>IA</span>
+                    <span class="sep">|</span>
+                    <span>Conseil</span>
+                </div>
 
-                    <p class="hero-sub">NOUS SOMMES CRAZY PINEAPPLE — UNE AGENCE CRÉATIVE AUDACIEUSE QUI TRANSFORME DES IDÉES FRAÎCHES EN EXPÉRIENCES NUMÉRIQUES PUISSANTES.</p>
-
-                    <div class="hero-ctas">
-                        <a href="/fr/services.html" class="btn-primary">
-                            Nos Services
-                            <span class="btn-icon"><img src="../assets/images/site-logo.png" alt="crazypineapple"></span>
-                        </a>
-                        <a href="/fr/portfolio.html" class="btn-outline">
-                            Notre Portfolio
-                            <span class="btn-icon" style="background:#000; border:1.5px solid var(--text-primary);"><img
-                                    src="../assets/images/site-logo.png" alt="crazypineapple"></span>
-                        </a>
+                <h1 class="hero-headline">
+                    <div class="first-line">
+                        <span class="text">
+                            <div class="text-group">Groupe</div>
+                        </span>
+                        <!-- Pill with icon -->
+                        <span class="hero-pill">
+                            <img src="../assets/images/group-crazy-img.png" alt="image 1" class="image-1">
+                            <img src="../assets/images/group-crazy-img.png" alt="image 2" class="image-2">
+                        </span>
+                        <span class="text">
+                            <div class="gold text-crazy">Crazy</div>
+                        </span>
                     </div>
+                    <div class="second-line">
+                        <span class="text">
+                            <div class="text-pineapple">Pineapple</div>
+                        </span>
+                        <!-- Quebec badge -->
+                        <span class="hero-badge">
+                            <div class="hero-badge-company-images">
+                                <img src="../assets/images/pineapple-inc-img.png" alt="pineapple-inc-img"
+                                    class="c-image-1">
+                                <img src="../assets/images/company-logo-2.png" alt="pineapple-inc-img"
+                                    class="img c-image-2">
+                                <img src="../assets/images/company-logo-3.png" alt="pineapple-inc-img"
+                                    class="img c-image-3">
+                                <img src="../assets/images/company-logo-4.png" alt="pineapple-inc-img"
+                                    class="img c-image-4">
+                                <img src="../assets/images/company-logo-5.png" alt="pineapple-inc-img"
+                                    class="img c-image-5">
+                            </div>
+                        </span>
+                        <span class="text">
+                            <div class="text-inc">Inc</div>
+                        </span>
+                    </div>
+                </h1>
+
+                <p class="hero-sub">NOUS SOMMES CRAZY PINEAPPLE — UNE AGENCE CRÉATIVE AUDACIEUSE QUI TRANSFORME DES
+                    IDÉES FRAÎCHES EN EXPÉRIENCES NUMÉRIQUES PUISSANTES.</p>
+
+                <div class="hero-ctas">
+                    <a href="/fr/services.html" class="btn-primary">
+                        Nos Services
+                        <span class="btn-icon"><img src="../assets/images/site-logo.png" alt="crazypineapple"></span>
+                    </a>
+                    <a href="/fr/portfolio.html" class="btn-outline">
+                        Notre Portfolio
+                        <span class="btn-icon" style="background:#000; border:1.5px solid var(--text-primary);"><img
+                                src="../assets/images/site-logo.png" alt="crazypineapple"></span>
+                    </a>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -164,7 +183,8 @@
         <div class="section-full-inner">
             <div class="section-header">
                 <h2 class="section-title">Nos Services</h2>
-                <p class="section-desc">NOUS CONCEVONS DES SOLUTIONS TECHNOLOGIQUES ADAPTÉES À VOTRE RÉALITÉ D'ENTREPRISE.</p>
+                <p class="section-desc">NOUS CONCEVONS DES SOLUTIONS TECHNOLOGIQUES ADAPTÉES À VOTRE RÉALITÉ
+                    D'ENTREPRISE.</p>
             </div>
 
             <div class="services-grid">
@@ -174,7 +194,8 @@
                             <img src="../assets/icons/ai-icon.svg" alt="icône ia">
                         </div>
                         <h3>Logiciel Sur Mesure &amp; IA</h3>
-                        <p>Nous construisons des logiciels sur mesure pour automatiser vos processus et créer des produits numériques uniques et des solutions d'entreprise.</p>
+                        <p>Nous construisons des logiciels sur mesure pour automatiser vos processus et créer des
+                            produits numériques uniques et des solutions d'entreprise.</p>
                         <a href="/fr/services.html#custom-software" class="service-link">En Savoir Plus
                             <img src="../assets/icons/readmore-icon.svg" alt="icône en savoir plus">
                         </a>
@@ -185,7 +206,8 @@
                             <img src="../assets/icons/app-dev-icon.svg" alt="icône développement d'applications">
                         </div>
                         <h3>Développement d'Applications Mobiles</h3>
-                        <p>Des applications mobiles natives et multiplateformes puissantes qui offrent des expériences utilisateur fluides pour les appareils iOS et Android.</p>
+                        <p>Des applications mobiles natives et multiplateformes puissantes qui offrent des expériences
+                            utilisateur fluides pour les appareils iOS et Android.</p>
                         <a href="/fr/services.html#mobile-apps" class="service-link">En Savoir Plus
                             <img src="../assets/icons/readmore-icon.svg" alt="icône en savoir plus">
                         </a>
@@ -196,7 +218,8 @@
                             <img src="../assets/icons/automation-icon.svg" alt="icône automatisation">
                         </div>
                         <h3>Automatisation</h3>
-                        <p>Nous automatisons les tâches et flux de travail répétitifs avec des outils intelligents, gagnant du temps, réduisant les erreurs et augmentant l'efficacité à grande échelle.</p>
+                        <p>Nous automatisons les tâches et flux de travail répétitifs avec des outils intelligents,
+                            gagnant du temps, réduisant les erreurs et augmentant l'efficacité à grande échelle.</p>
                         <a href="/fr/automation.html" class="service-link">En Savoir Plus
                             <img src="../assets/icons/readmore-icon.svg" alt="icône en savoir plus">
                         </a>
@@ -209,7 +232,8 @@
                             <img src="../assets/icons/web-design-icon.svg" alt="icône design web">
                         </div>
                         <h3>Design de Sites Web</h3>
-                        <p>Des sites web magnifiques, responsifs et optimisés pour la conversion, adaptés pour impressionner les visiteurs et élever votre présence numérique.</p>
+                        <p>Des sites web magnifiques, responsifs et optimisés pour la conversion, adaptés pour
+                            impressionner les visiteurs et élever votre présence numérique.</p>
                         <a href="/fr/application-design.html" class="service-link">En Savoir Plus
                             <img src="../assets/icons/readmore-icon.svg" alt="icône en savoir plus">
                         </a>
@@ -220,7 +244,8 @@
                             <img src="../assets/icons/digital-marketing-icon.svg" alt="icône marketing numérique">
                         </div>
                         <h3>Marketing Numérique</h3>
-                        <p>Des campagnes de marketing numérique stratégiques qui génèrent du trafic, développent les audiences et transforment les prospects en clients fidèles.</p>
+                        <p>Des campagnes de marketing numérique stratégiques qui génèrent du trafic, développent les
+                            audiences et transforment les prospects en clients fidèles.</p>
                         <a href="/fr/digital-marketing.html" class="service-link">En Savoir Plus
                             <img src="../assets/icons/readmore-icon.svg" alt="icône en savoir plus">
                         </a>
@@ -231,7 +256,8 @@
                             <img src="../assets/icons/seo-icon.svg" alt="icône seo">
                         </div>
                         <h3>Référencement SEO</h3>
-                        <p>Nous optimisons votre présence en ligne avec des stratégies SEO éprouvées pour mieux vous classer dans les résultats de recherche et attirer plus de trafic organique.</p>
+                        <p>Nous optimisons votre présence en ligne avec des stratégies SEO éprouvées pour mieux vous
+                            classer dans les résultats de recherche et attirer plus de trafic organique.</p>
                         <a href="#" class="service-link">En Savoir Plus
                             <img src="../assets/icons/readmore-icon.svg" alt="icône en savoir plus">
                         </a>
@@ -266,7 +292,8 @@
     <section class="proven-section" id="portfolio">
         <div class="proven-header">
             <h2 class="section-title">Résultats Prouvés,<br />Designs Époustouflants</h2>
-            <p class="section-desc">DES SOLUTIONS CONCRÈTES LIVRÉES DANS DIVERS SECTEURS : CONSTRUCTION, IMMOBILIER, AGRICULTURE, SANTÉ, TRANSPORT ET BIEN PLUS ENCORE.</p>
+            <p class="section-desc">DES SOLUTIONS CONCRÈTES LIVRÉES DANS DIVERS SECTEURS : CONSTRUCTION, IMMOBILIER,
+                AGRICULTURE, SANTÉ, TRANSPORT ET BIEN PLUS ENCORE.</p>
         </div>
 
         <div class="portfolio-grid">
@@ -275,7 +302,8 @@
                     <img src="../assets/images/securebox-stor.png" alt="secure box storage">
                 </div>
                 <h3>SecureBox Storage</h3>
-                <p>Conception et développement de site web sur mesure mettant l'accent sur une image de marque épurée, une réservation en ligne facile et une mise en page moderne et responsive.</p>
+                <p>Conception et développement de site web sur mesure mettant l'accent sur une image de marque épurée,
+                    une réservation en ligne facile et une mise en page moderne et responsive.</p>
                 <div class="portfolio-tags">
                     <span class="tag">Design Web</span>
                     <span class="tag">Image de Marque</span>
@@ -288,7 +316,8 @@
                     <img src="../assets/images/ardent-moving.png" alt="ardent moving">
                 </div>
                 <h3>Ardent Moving</h3>
-                <p>Refonte complète de la présence numérique pour une entreprise de déménagement. Conçue pour la confiance, la lisibilité et une forte conversion sur tous les appareils.</p>
+                <p>Refonte complète de la présence numérique pour une entreprise de déménagement. Conçue pour la
+                    confiance, la lisibilité et une forte conversion sur tous les appareils.</p>
                 <div class="portfolio-tags">
                     <span class="tag">Design Web</span>
                     <span class="tag">SEO</span>
@@ -301,7 +330,8 @@
                     <img src="../assets/images/novamed-clinic.png" alt="novamed clinic">
                 </div>
                 <h3>Clinique Novamed</h3>
-                <p>Site web médical professionnel avec prise de rendez-vous, support multilingue et design moderne qui inspire confiance et accessibilité.</p>
+                <p>Site web médical professionnel avec prise de rendez-vous, support multilingue et design moderne qui
+                    inspire confiance et accessibilité.</p>
                 <div class="portfolio-tags">
                     <span class="tag">Santé</span>
                     <span class="tag">Multilingue</span>
@@ -314,7 +344,8 @@
                     <img src="../assets/images/transitusa.png" alt="transitUSA">
                 </div>
                 <h3>TransitUSA</h3>
-                <p>Design responsive pour une plateforme logistique de transport. Interface épurée avec visualisation d'itinéraires, affichage de données en temps réel et approche mobile-first.</p>
+                <p>Design responsive pour une plateforme logistique de transport. Interface épurée avec visualisation
+                    d'itinéraires, affichage de données en temps réel et approche mobile-first.</p>
                 <div class="portfolio-tags">
                     <span class="tag">Transport</span>
                     <span class="tag">Design Responsive</span>
@@ -344,7 +375,8 @@
             <!-- ── CTA DARK ── -->
             <div class="cta-dark">
                 <h2>Connectons-<span style="color: #D7D7D7;">nous avec<br />CrazyPineapple</span></h2>
-                <p>N'hésitez pas à me contacter si vous avez des questions. Je suis disponible pour de nouveaux projets ou simplement pour discuter.</p>
+                <p>N'hésitez pas à me contacter si vous avez des questions. Je suis disponible pour de nouveaux projets
+                    ou simplement pour discuter.</p>
                 <div class="cta-btns">
                     <a href="/fr/contact-us.html" class="btn-primary">
                         Prendre rendez-vous
