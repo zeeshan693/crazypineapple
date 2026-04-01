@@ -720,3 +720,120 @@
 body.nav-open {
     overflow: hidden;
 }
+/* ── NAV DROPDOWN ── */
+
+/* Wrapper — gives us a hover anchor */
+.nav-item.has-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Chevron SVG */
+.nav-chevron {
+    display: inline-block;
+    margin-left: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, color 0.2s;
+    color: currentColor;
+}
+
+.nav-item.has-dropdown:hover .nav-chevron {
+    transform: rotate(-180deg);
+    color: var(--gold-mid);
+}
+
+/* The dropdown panel */
+.nav-dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 18px 0 10px; /* 18px top = invisible bridge over the gap */
+    position: absolute;
+    top: 100%;             /* flush — no gap, mouse never escapes */
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    min-width: 220px;
+    background: transparent; /* panel bg handled by ::before */
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+
+    /* Hidden by default */
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.25s ease,
+                transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                visibility 0.25s;
+}
+
+/* Actual visible white panel */
+.nav-dropdown::before {
+    content: '';
+    position: absolute;
+    top: 18px;   /* matches padding-top */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 48px 0 rgba(0, 0, 0, 0.12),
+                0 2px 8px 0 rgba(0, 0, 0, 0.06);
+    z-index: -1;
+}
+
+/* Gold accent line at top of visible panel */
+.nav-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 18px;   /* flush with panel top */
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(to right, #A16C16, #E6B554);
+    border-radius: 2px;
+}
+
+/* Reveal on hover */
+.nav-item.has-dropdown:hover .nav-dropdown {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Dropdown links */
+.nav-dropdown li a {
+    display: block;
+    padding: 10px 22px;
+    font-family: var(--primary-font);
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-color-primary);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;  /* sit above ::before panel so links are clickable */
+    transition: color 0.2s, background 0.2s, padding-left 0.2s;
+    white-space: nowrap;
+}
+
+.nav-dropdown li a:hover {
+    color: var(--gold-mid);
+    background: rgba(230, 181, 84, 0.06);
+    padding-left: 28px;
+}
+
+/* Subtle divider between items */
+.nav-dropdown li + li {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ── MOBILE: hide desktop dropdown ── */
+@media (max-width: 1023px) {
+    .nav-dropdown {
+        display: none;
+    }
+}
