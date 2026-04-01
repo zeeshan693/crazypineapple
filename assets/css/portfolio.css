@@ -1,7 +1,7 @@
 /* homepage.css */
 
 body {
-    background-color: #F8F8F8;
+    background-color: #fff;
 }
 
 /**************
@@ -471,6 +471,38 @@ body {
 ****************
 ******************/
 
+/* portfolio filters */
+.portfolio-filters{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.portfolio-filters .filter-btn {
+    font-size: clamp(0.8rem, 5vw, 1.2rem);
+    color: #181819;
+    font-weight: 700;
+    background: transparent;
+    padding: 20px 40px;
+    border-radius: 13px;
+    border: 1px solid #C5C5C5;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.portfolio-filters .filter-btn.active {
+    color: var(--white);
+    background: var(--golden-gradient);
+    border-color: var(--gold);
+}
+
+.portfolio-filters .filter-btn:hover {
+    color: var(--white);
+    background: var(--golden-gradient);
+    border-color: var(--gold);
+}
+
+
 /* ── PORTFOLIO ── */
 .portfolio-grid {
     display: grid;
@@ -748,6 +780,14 @@ body {
   .clients-bar { padding: 24px 14px; }
   .clients-inner { gap: 12px; }
   .client-logo { width: 100px; }
+    .portfolio-filters .filter-btn {
+        padding: 12px 14px;
+        font-size: 1rem;
+    }
+    .portfolio-filters {
+        gap: 7px;
+    }
+
 }
 
 
