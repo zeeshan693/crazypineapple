@@ -22,7 +22,10 @@
     border-radius: 555px;
     z-index: 9999;
     box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.08);
+    overflow: visible;
+    box-sizing: border-box;
 }
+
 
 /* ── LOGO ZONE ── */
 .logo-zone {
@@ -194,7 +197,22 @@
    GLOBAL MOBILE HELPERS  (≤ 1023px)
    ───────────────────────────────────────────── */
 @media (max-width: 1023px) {
-    /* nothing here for now */
+    .site-header {
+        width: 92%;
+        max-width: calc(100% - 32px);
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .header-right {
+        padding: 0 16px;
+        gap: 12px;
+    }
 }
 
 /* ─────────────────────────────────────────────
@@ -204,38 +222,38 @@
 @media (max-width: 430px) {
 
   /* ── Header ── */
-  .site-header {
-    width: 92%;
-    height: 60px;
-    margin-top: 8px;
-    border-radius: 999px;
-    padding: 0 14px;
-  }
+    .site-header {
+        width: 94%;
+        height: 60px;
+        margin-top: 8px;
+        border-radius: 999px;
+        padding: 0 12px;
+    }
 
-  .logo-zone {
-    padding: 0 10px 0 6px;
-  }
-
-  .logo-zone .logo {
-    width: 40px;
-  }
+    .logo-zone {
+        padding: 0 8px 0 4px;
+    }
+    
+    .logo-zone .logo {
+        width: 40px;
+    }
+    
+    .contact-link {
+        display: none;
+    }
+    
+    .divider {
+        display: none;
+    }
+    
+    .header-right {
+        margin-left: auto;
+        padding: 0 4px;
+        gap: 8px;
+    }
 
   .nav-links {
     display: none;         /* hidden behind hamburger */
-  }
-
-  .contact-link {
-    display: none;         /* too tight on mobile */
-  }
-
-  .header-right {
-    margin-left: auto;
-    padding: 0 6px;
-    gap: 10px;
-  }
-
-  .divider {
-    display: none;
   }
 
 }
@@ -245,15 +263,16 @@
    ───────────────────────────────────────────── */
 @media (max-width: 360px) {
 
-  .site-header {
-    width: 94%;
-    height: 56px;
-    margin-top: 6px;
-  }
-
-  .logo-zone .logo {
-    width: 34px;
-  }
+    .site-header {
+        width: 96%;
+        height: 56px;
+        margin-top: 6px;
+        padding: 0 8px;
+    }
+    
+    .logo-zone .logo {
+        width: 34px;
+    }
 
 }
 
@@ -719,6 +738,8 @@
 
 body.nav-open {
     overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 /* ── NAV DROPDOWN ── */
 

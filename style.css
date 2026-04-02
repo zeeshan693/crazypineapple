@@ -266,3 +266,47 @@ img {
 @media (min-width: 481px) {
     .mobile-right-controls { display: none !important; }
 }
+
+
+/* Dropdown styles for mobile menu */
+.nav-item.has-dropdown {
+  position: relative;
+}
+
+.z-nav-dropdown {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+}
+
+.z-nav-item.has-dropdown.dropdown-open .z-nav-dropdown {
+  display: block;
+  max-height: 500px; /* Adjust based on your content */
+}
+
+.z-nav-dropdown li {
+  padding: 10px 0 10px 20px;
+}
+
+.z-nav-dropdown li a {
+  display: block;
+}
+
+.z-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.nav-chevron {
+  transition: transform 0.3s ease;
+}
+
+.nav-item.has-dropdown.dropdown-open .nav-chevron {
+  transform: rotate(180deg);
+}
