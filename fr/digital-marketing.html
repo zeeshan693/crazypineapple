@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Marketing Numérique | Crazy Pineapple</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../assets/css/digital-marketing.css">
+    <link rel="stylesheet" href="../assets/css/header-two.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+</head>
+
+<body>
+    <!-- En-tête du site -->
+    <header class="site-header">
+        <div class="logo-zone">
+            <div class="logo">
+                <img src="../assets/images/site-logo.png" alt="logo crazypineapple"
+                    onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'50\' r=\'45\' fill=\'%23E6B554\'/%3E%3Cpath fill=\'%23A16C16\' d=\'M35 35 L65 35 L50 65 Z\'/%3E%3C/svg%3E'">
+            </div>
+        </div>
+        <!-- LIENS DE NAVIGATION -->
+        <nav class="nav-links">
+            <a href="/fr/homepage.html">Accueil</a>
+            <div class="nav-item has-dropdown">
+                <a href="/fr/services.html">
+                    Services
+                    <svg class="nav-chevron" xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                        viewBox="0 0 10 10" fill="none">
+                        <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </a>
+                <ul class="nav-dropdown">
+                    <li><a href="/fr/automation.html">Automatisation</a></li>
+                    <li><a href="/fr/custom-software-and-ai.html">Logiciels sur mesure & IA</a></li>
+                    <li><a href="/fr/application-design.html">Design d'application</a></li>
+                    <li><a href="/fr/web-design-and-development.html">Développement Web</a></li>
+                    <li><a href="/fr/digital-marketing.html">Digital Marketing</a></li>
+                    <li><a href="/fr/application-design.html">Design UI & UX</a></li>
+                </ul>
+            </div>
+            <a href="/fr/portfolio.html">Portfolio</a>
+            <a href="/fr/about-us.html">À propos</a>
+        </nav>
+        <div class="header-right">
+            <a href="/fr/contact-us.html" class="contact-link">
+                Contactez-nous
+                <span class="arrow">↗</span>
+            </a>
+            <div class="divider"></div>
+
+            <!-- Sélecteur de langue (bureau) -->
+            <div class="lang-switch-wrap">
+                <label class="lang-switch" for="langToggle" aria-label="Sélecteur de langue">
+                    <span class="lang-code lang-code-en">EN</span>
+                    <div class="lang-pill-wrap">
+                        <input type="checkbox" id="langToggle">
+                        <span class="lang-pill"><span class="lang-thumb"></span></span>
+                    </div>
+                    <span class="lang-code lang-code-fr">FR</span>
+                </label>
+                <span class="lang-current-text">Français</span>
+            </div>
+
+            <div class="hamburger" role="button" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION HÉRO -->
+    <section class="hero-modern">
+        <div class="hero-container">
+            <!-- Image de fond avec opacité 0.8 -->
+            <div class="hero-bg-wrapper">
+                <div class="hero-bg-image"></div>
+                <div class="hero-bg-overlay"></div>
+            </div>
+
+            <div class="hero-content-grid">
+                <!-- COLONNE TEXTE GAUCHE -->
+                <div class="hero-text-col">
+
+                    <h1>Marketing <br><span>Numérique</span></h1>
+                    <p class="hero-description">
+                        NOUS CRÉONS DES STRATÉGIES DE MARKETING NUMÉRIQUE BASÉES SUR LES DONNÉES, SPÉCIALEMENT
+                        CONÇUES POUR VOTRE MARQUE, AVEC DES OUTILS IA INTÉGRÉS POUR MAXIMISER VOTRE PORTÉE,
+                        VOTRE ENGAGEMENT ET VOS REVENUS.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">4.8+</span>
+                            <span class="stat-label">Note Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">5000+</span>
+                            <span class="stat-label">Leads Générés</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Précision des Campagnes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Engagement ROI</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- COLONNE DROITE : IMAGE APPAREIL MOBILE -->
+                <div class="hero-mockup-col">
+                    <div class="mobile-device-wrapper">
+                        <img src="../assets/images/digital-marketing-stats.png" alt="Aperçu de l'application mobile"
+                            class="mobile-device-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION CE QUE NOUS OFFRONS -->
+    <section class="delivery-section">
+        <div class="delivery-container">
+            <h2 class="delivery-heading">CE QUE NOUS <span class="deliver-gradient">OFFRONS</span></h2>
+
+            <div class="delivery-row delivery-row--3">
+
+                <!-- SEO -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            <line x1="11" y1="8" x2="11" y2="14" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                        </svg>
+                    </div>
+                    <h3>SEO &amp; OPTIMISATION<br>DES RECHERCHES<br>ORGANIQUES</h3>
+                </div>
+
+                <!-- Réseaux Sociaux -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="18" cy="5" r="3" />
+                            <circle cx="6" cy="12" r="3" />
+                            <circle cx="18" cy="19" r="3" />
+                            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                        </svg>
+                    </div>
+                    <h3>MARKETING &amp; GESTION<br>DES RÉSEAUX<br>SOCIAUX</h3>
+                </div>
+
+                <!-- Marketing IA -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="11" width="18" height="10" rx="2" />
+                            <path d="M12 2a4 4 0 0 1 4 4v5H8V6a4 4 0 0 1 4-4z" />
+                            <circle cx="9" cy="16" r="1" fill="white" />
+                            <circle cx="15" cy="16" r="1" fill="white" />
+                            <line x1="8" y1="11" x2="8" y2="8" />
+                            <line x1="16" y1="11" x2="16" y2="8" />
+                        </svg>
+                    </div>
+                    <h3>MARKETING IA<br>(AUTOMATISATION,<br>CIBLAGE INTELLIGENT)</h3>
+                </div>
+
+            </div>
+
+            <div class="delivery-row delivery-row--3">
+
+                <!-- Intégration CRM -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="8" height="6" rx="1" />
+                            <rect x="14" y="3" width="8" height="6" rx="1" />
+                            <rect x="8" y="15" width="8" height="6" rx="1" />
+                            <path d="M6 9v3h12V9" />
+                            <line x1="12" y1="12" x2="12" y2="15" />
+                        </svg>
+                    </div>
+                    <h3>INTÉGRATION À VOS<br>OUTILS EXISTANTS<br>(CRM, EMAIL, ANALYTIQUE)</h3>
+                </div>
+
+                <!-- Campagnes Email & Push -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                            <line x1="18" y1="2" x2="18" y2="6" />
+                            <circle cx="18" cy="1" r="1" fill="white" stroke="none" />
+                        </svg>
+                    </div>
+                    <h3>GESTION DES<br>CAMPAGNES EMAIL<br>&amp; NOTIFICATION PUSH</h3>
+                </div>
+
+                <!-- Design créatif / Image de marque -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="13.5" cy="6.5" r="2.5" />
+                            <circle cx="19" cy="13" r="2.5" />
+                            <circle cx="6.5" cy="13" r="2.5" />
+                            <circle cx="13.5" cy="19.5" r="2.5" />
+                            <circle cx="12" cy="12" r="1" fill="white" stroke="none" />
+                        </svg>
+                    </div>
+                    <h3>DESIGN CRÉATIF<br>ALIGNÉ AVEC VOTRE<br>IMAGE DE MARQUE</h3>
+                </div>
+
+            </div>
+
+            <div class="delivery-row delivery-row--2">
+
+                <!-- Publicités payantes / PPC -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="12" y1="8" x2="12" y2="16" />
+                            <path d="M9 10h4.5a1.5 1.5 0 0 1 0 3H9" />
+                            <path d="M9 13h5a1.5 1.5 0 0 1 0 3H9" />
+                        </svg>
+                    </div>
+                    <h3>PUBLICITÉS PAYANTES<br>&amp; GESTION PPC<br>(GOOGLE, META, ET PLUS)</h3>
+                </div>
+
+                <!-- Analytique & Rapports -->
+                <div class="delivery-card">
+                    <div class="delivery-icon-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10" />
+                            <line x1="12" y1="20" x2="12" y2="4" />
+                            <line x1="6" y1="20" x2="6" y2="14" />
+                            <line x1="2" y1="20" x2="22" y2="20" />
+                        </svg>
+                    </div>
+                    <h3>ANALYTIQUE &amp;<br>RAPPORTS DE<br>PERFORMANCE</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION NOS TECHNOLOGIES -->
+    <section class="technologies-section">
+        <div class="technologies-container">
+            <h2 class="section-heading">NOS TECHNOLOGIES</h2>
+            <div class="tech-strip">
+
+                <!-- Google Ads -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="30" cy="70" r="16" fill="#555" />
+                            <circle cx="70" cy="70" r="16" fill="#777" />
+                            <circle cx="50" cy="35" r="16" fill="#999" />
+                        </svg>
+                        <span>Google Ads</span>
+                    </div>
+                </div>
+
+                <!-- Meta Ads -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <path
+                                d="M10 55 C10 30, 25 20, 38 20 C50 20, 55 35, 50 50 C45 65, 38 75, 38 75 C38 75, 45 65, 55 50 C65 35, 72 20, 85 20 C95 20, 100 35, 90 55 C80 75, 70 85, 60 85 C50 85, 45 75, 50 60 C55 45, 60 35, 55 30"
+                                stroke="#555" stroke-width="7" fill="none" stroke-linecap="round" />
+                        </svg>
+                        <span>Meta Ads</span>
+                    </div>
+                </div>
+
+                <!-- Google Analytics -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <rect x="12" y="50" width="22" height="40" rx="4" fill="#555" />
+                            <rect x="39" y="30" width="22" height="60" rx="4" fill="#777" />
+                            <rect x="66" y="10" width="22" height="80" rx="4" fill="#999" />
+                        </svg>
+                        <span>GA4</span>
+                    </div>
+                </div>
+
+                <!-- HubSpot -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="72" cy="28" r="14" fill="#555" />
+                            <circle cx="28" cy="50" r="10" fill="#777" />
+                            <circle cx="72" cy="72" r="10" fill="#999" />
+                            <line x1="42" y1="45" x2="60" y2="34" stroke="#555" stroke-width="5" />
+                            <line x1="42" y1="55" x2="62" y2="66" stroke="#555" stroke-width="5" />
+                        </svg>
+                        <span>HubSpot</span>
+                    </div>
+                </div>
+
+                <!-- Mailchimp -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <rect x="10" y="25" width="80" height="55" rx="8" stroke="#555" stroke-width="5"
+                                fill="none" />
+                            <polyline points="10,30 50,58 90,30" stroke="#555" stroke-width="5" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <line x1="10" y1="70" x2="35" y2="50" stroke="#555" stroke-width="4" />
+                            <line x1="90" y1="70" x2="65" y2="50" stroke="#555" stroke-width="4" />
+                        </svg>
+                        <span>Mailchimp</span>
+                    </div>
+                </div>
+
+                <!-- SEMrush -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="42" cy="42" r="28" stroke="#555" stroke-width="6" fill="none" />
+                            <line x1="62" y1="62" x2="88" y2="88" stroke="#555" stroke-width="7"
+                                stroke-linecap="round" />
+                            <line x1="42" y1="26" x2="42" y2="58" stroke="#555" stroke-width="5"
+                                stroke-linecap="round" />
+                            <line x1="26" y1="42" x2="58" y2="42" stroke="#555" stroke-width="5"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>SEMrush</span>
+                    </div>
+                </div>
+
+                <!-- Hootsuite -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <path d="M20 65 C20 40 35 25 50 25 C65 25 70 38 65 52" stroke="#555" stroke-width="6"
+                                fill="none" stroke-linecap="round" />
+                            <path d="M38 65 C38 48 48 38 58 38 C68 38 72 48 68 58" stroke="#777" stroke-width="6"
+                                fill="none" stroke-linecap="round" />
+                            <rect x="56" y="55" width="14" height="22" rx="7" fill="#555" />
+                            <rect x="20" y="55" width="14" height="22" rx="7" fill="#999" />
+                        </svg>
+                        <span>Hootsuite</span>
+                    </div>
+                </div>
+
+                <!-- Canva -->
+                <div class="tech-strip-item">
+                    <div class="tech-logo">
+                        <svg viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#555" stroke-width="5" fill="none" />
+                            <circle cx="50" cy="50" r="14" fill="#555" />
+                            <line x1="50" y1="10" x2="50" y2="30" stroke="#555" stroke-width="5"
+                                stroke-linecap="round" />
+                            <line x1="50" y1="70" x2="50" y2="90" stroke="#555" stroke-width="5"
+                                stroke-linecap="round" />
+                            <line x1="10" y1="50" x2="30" y2="50" stroke="#555" stroke-width="5"
+                                stroke-linecap="round" />
+                            <line x1="70" y1="50" x2="90" y2="50" stroke="#555" stroke-width="5"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>Canva</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION POUR QUI -->
+    <section class="whofor-section">
+        <div class="whofor-container">
+            <div class="whofor-content">
+                <div class="whofor-images">
+                    <div class="whofor-img"><img src="../assets/images/who-fr.webp" alt="Équipe"
+                            onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>👥</div>'"></div>
+                    <div class="whofor-img whofor-img--tall"><img src="../assets/images/who-fr3.webp" alt="Professionnel"
+                            onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\' style=\'min-height:362px\'>👩‍💻</div>'">
+                    </div>
+                    <div class="whofor-img"><img src="../assets/images/who-fr2.webp" alt="Réunion"
+                            onerror="this.parentElement.innerHTML='<div class=\'img-placeholder\'>🤝</div>'"></div>
+                </div>
+                <div class="whofor-text">
+                    <h2 class="section-heading">POUR QUI</h2>
+                    <p class="whofor-description">Les entreprises de toutes tailles souhaitant développer leur présence en ligne, attirer davantage de clients et transformer les clics en conversions grâce à un marketing numérique intelligent et basé sur les données.</p>
+                    <div class="whofor-btns">
+                        <a href="/fr/portfolio.html" class="btn-whofor-primary">Voir nos projets <span
+                                class="btn-arrow-badge">↗</span></a>
+                        <a href="/fr/contact-us.html" class="btn-whofor-outline">Contactez-nous <span
+                                class="btn-arrow-badge">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <div class="footer-wrapper">
+        <div class="footer-content-container" style="background-image: url('../assets/images/footer-bg.png');">
+            <!-- ── CTA SOMBRE ── -->
+            <div class="cta-dark">
+                <h2>Prêt pour une <br> Équipe sur Mesure</h2>
+                <p>N'hésitez pas à nous contacter pour toute question. Nous sommes disponibles pour de nouveaux projets ou simplement pour échanger.
+                </p>
+                <div class="cta-btns">
+                    <a href="#" class="btn-primary">
+                        Prendre Rendez-vous
+                        <span class="btn-icon"><img src="../assets/images/site-logo.png" alt="crazypineapple"></span>
+                    </a>
+                    <a href="/fr/portfolio.html" class="btn-outline">
+                        Notre Portfolio
+                        <span class="btn-icon" style="background:#fff; border:1.5px solid var(--text-primary);"><img
+                                src="../assets/images/site-logo.png" alt="crazypineapple"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ── PIED DE PAGE ── -->
+            <footer>
+                <div class="footer-top">
+                    <div class="footer-logo-wrap">
+                        <div class="logo"><img src="../assets/images/site-logo.png" alt="logo crazypineapple"></div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Liens Rapides</h4>
+                        <ul>
+                            <li><a href="/fr/homepage.html">Accueil</a></li>
+                            <li><a href="/fr/about-us.html">À propos</a></li>
+                            <li><a href="/fr/prices.html">Tarifs</a></li>
+                            <li><a href="/fr/services.html">Services</a></li>
+                            <li><a href="/fr/contact-us.html">Contactez-nous</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Contactez-nous</h4>
+                        <div class="contact-line">
+                            <img src="../assets/icons/envelope-icon.svg" alt="icône email">
+                            info@crazypineapple.com
+                        </div>
+                        <div class="contact-line">
+                            <img src="../assets/icons/phone-icon.svg" alt="icône téléphone">
+                            +1 (438) 000-0000
+                        </div>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">SEO &amp; Référencement</a></li>
+                            <li><a href="#">Conception Web</a></li>
+                            <li><a href="#">Marketing Social</a></li>
+                            <li><a href="#">Consultation Privée</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-col">
+                        <h4>Restez Connectés</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="#" class="social-icon">tw</a>
+                            <a href="#" class="social-icon">ig</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-regions">
+                    <h5>Services par Région — Québec</h5>
+                    <div class="region-tags">
+                        <a href="#" class="region-tag">Montréal</a>
+                        <a href="#" class="region-tag">Québec</a>
+                        <a href="#" class="region-tag">Laval</a>
+                        <a href="#" class="region-tag">Gatineau</a>
+                        <a href="#" class="region-tag">Longueuil</a>
+                        <a href="#" class="region-tag">Sherbrooke</a>
+                        <a href="#" class="region-tag">Saguenay</a>
+                        <a href="#" class="region-tag">Lévis</a>
+                        <a href="#" class="region-tag">Saint-Jérôme</a>
+                        <a href="#" class="region-tag">Trois-Rivières</a>
+                        <a href="#" class="region-tag">Saint John</a>
+                    </div>
+
+                    <h5>Services par Ville — Canada</h5>
+                    <div class="region-tags">
+                        <a href="#" class="region-tag">Toronto</a>
+                        <a href="#" class="region-tag">Montréal</a>
+                        <a href="#" class="region-tag">Laval</a>
+                        <a href="#" class="region-tag">Calgary</a>
+                        <a href="#" class="region-tag">Edmonton</a>
+                        <a href="#" class="region-tag">Mississauga</a>
+                        <a href="#" class="region-tag">Brampton</a>
+                        <a href="#" class="region-tag">Hamilton</a>
+                        <a href="#" class="region-tag">Québec (Ville)</a>
+                        <a href="#" class="region-tag">Winnipeg</a>
+                        <a href="#" class="region-tag">London ON</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>Politique de Confidentialité</span>
+                    <span>Copyright © 2024 Crazy Pineapple Inc. Tous droits réservés.</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="../assets/js/lang-toggle.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+</body>
+
+</html>
