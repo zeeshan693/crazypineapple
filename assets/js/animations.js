@@ -35,32 +35,26 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: 0,
     });
 
-    // Hero text elements - initial states based on device
-    if (isMobile() || isTablet()) {
-        // Mobile/tablet: elements start visible but with different transforms
-        gsap.set(".text-group, .text-crazy, .text-pineapple, .text-inc", {
-            opacity: 0,
-            xPercent: 0,
-        });
-        
-        gsap.set(".hero-pill, .hero-badge, .hero-tag, .hero-sub, .site-header, .hero .btn-primary, .hero .btn-outline", {
-            opacity: 0,
-        });
-    } else {
-        // Desktop: start with transforms
-        gsap.set(".text-group, .text-pineapple", { xPercent: -100 });
-        gsap.set(".text-crazy, .text-inc", { xPercent: 100 });
-        gsap.set(".hero-pill, .hero-badge, .hero-tag, .hero-sub, .site-header, .hero .btn-primary, .hero .btn-outline", {
-            opacity: 0,
-        });
-        gsap.set(".hero-pill", { yPercent: -220 });
-        gsap.set(".hero-badge", { scale: 0.6, rotate: 15 });
-        gsap.set(".hero-tag", { yPercent: -100 });
-        gsap.set(".hero-sub", { yPercent: 300 });
-        gsap.set(".site-header", { yPercent: -100 });
-        gsap.set(".hero .btn-primary", { xPercent: -100 });
-        gsap.set(".hero .btn-outline", { xPercent: 100 });
-    }
+    // Hero text elements - initial states (SAME FOR ALL DEVICES NOW)
+    // This ensures mobile gets the same sliding animation as desktop
+    gsap.set(".text-group, .text-pineapple", { 
+        xPercent: -100,
+        opacity: 0 
+    });
+    gsap.set(".text-crazy, .text-inc", { 
+        xPercent: 100,
+        opacity: 0 
+    });
+    gsap.set(".hero-pill, .hero-badge, .hero-tag, .hero-sub, .site-header, .hero .btn-primary, .hero .btn-outline", {
+        opacity: 0,
+    });
+    gsap.set(".hero-pill", { yPercent: -220 });
+    gsap.set(".hero-badge", { scale: 0.6, rotate: 15 });
+    gsap.set(".hero-tag", { yPercent: -100 });
+    gsap.set(".hero-sub", { yPercent: 300 });
+    gsap.set(".site-header", { yPercent: -100 });
+    gsap.set(".hero .btn-primary", { xPercent: -100 });
+    gsap.set(".hero .btn-outline", { xPercent: 100 });
 
     // Logo Animation Timeline
     const logoTl = gsap.timeline();
@@ -73,157 +67,141 @@ document.addEventListener("DOMContentLoaded", () => {
         ease: "power4.inOut",
     });
 
-    // Hero Section Animations Timeline
+    // Hero Section Animations Timeline (SAME FOR ALL DEVICES)
     const heroTl = gsap.timeline();
 
-    if (isMobile() || isTablet()) {
-        // Mobile/tablet: simpler animations
-        heroTl.to(".text-group, .text-crazy, .text-pineapple, .text-inc", {
+    // Text sliding animations - now works on mobile too
+    heroTl.fromTo(".text-group",
+        { xPercent: -100, opacity: 0 },
+        {
+            xPercent: 0,
             opacity: 1,
-            duration: rv(1, 1, 1, 1.2, 1.5, 1.5),
+            duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
             ease: "circ.inOut",
-        }, 0);
-        
-        heroTl.to(".hero-pill, .hero-badge, .hero-tag, .hero-sub, .site-header, .hero .btn-primary, .hero .btn-outline", {
+        },
+        0
+    );
+
+    heroTl.fromTo(".text-crazy",
+        { xPercent: 100, opacity: 0 },
+        {
+            xPercent: 0,
             opacity: 1,
-            duration: rv(0.8, 0.8, 0.8, 1, 1.2, 1.2),
-            stagger: rv(0.05, 0.05, 0.05, 0.08, 0.1, 0.1),
+            duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
             ease: "circ.inOut",
-        }, 0.3);
-        
-        // Add slight movement for mobile
-        heroTl.to(".text-group", {
-            x: rv(0, 0, 0, 5, 10, 0),
-            duration: 1,
-        }, 0);
-        
-        heroTl.to(".text-crazy", {
-            x: rv(0, 0, 0, -5, -10, 0),
-            duration: 1,
-        }, 0);
-        
-    } else {
-        // Desktop: full animations
-        heroTl.fromTo(".text-group",
-            { xPercent: -100 },
-            {
-                xPercent: 0,
-                duration: rv(null, null, null, null, 1.8, 2),
-                ease: "circ.inOut",
-            },
-            0
-        );
+        },
+        0
+    );
 
-        heroTl.fromTo(".text-crazy",
-            { xPercent: 100 },
-            {
-                xPercent: 0,
-                duration: rv(null, null, null, null, 1.8, 2),
-                ease: "circ.inOut",
-            },
-            0
-        );
-
-        heroTl.fromTo(".text-pineapple",
-            { xPercent: -100 },
-            {
-                xPercent: 0,
-                duration: rv(null, null, null, null, 1.8, 2),
-                ease: "circ.inOut",
-            },
-            0
-        );
-
-        heroTl.fromTo(".text-inc",
-            { xPercent: 100 },
-            {
-                xPercent: 0,
-                duration: rv(null, null, null, null, 1.8, 2),
-                ease: "circ.inOut",
-            },
-            0
-        );
-
-        heroTl.fromTo(".hero-pill", {
-            yPercent: -220,
-            opacity: 0,
-        }, {
-            yPercent: 0,
+    heroTl.fromTo(".text-pineapple",
+        { xPercent: -100, opacity: 0 },
+        {
+            xPercent: 0,
             opacity: 1,
-            duration: rv(null, null, null, null, 1.8, 2),
+            duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
             ease: "circ.inOut",
-        }, 0.3);
+        },
+        0
+    );
 
-        heroTl.fromTo(".hero-badge", {
-            scale: 0.6,
-            rotate: 15,
-            opacity: 0,
-        }, {
-            scale: 1,
-            rotate: 0,
+    heroTl.fromTo(".text-inc",
+        { xPercent: 100, opacity: 0 },
+        {
+            xPercent: 0,
             opacity: 1,
-            duration: rv(null, null, null, null, 1.8, 2),
+            duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
             ease: "circ.inOut",
-        }, 0.3);
+        },
+        0
+    );
 
-        heroTl.fromTo(".hero-tag", {
-            yPercent: -100,
-            opacity: 0,
-        }, {
-            yPercent: 0,
-            opacity: 1,
-            duration: 1,
-        }, 0.3);
+    // Pill animation
+    heroTl.fromTo(".hero-pill", {
+        yPercent: -220,
+        opacity: 0,
+    }, {
+        yPercent: 0,
+        opacity: 1,
+        duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
+        ease: "circ.inOut",
+    }, 0.3);
 
-        heroTl.fromTo(".hero-sub", {
-            yPercent: 300,
+    // Badge animation
+    heroTl.fromTo(".hero-badge", {
+        scale: 0.6,
+        rotate: 15,
+        opacity: 0,
+    }, {
+        scale: 1,
+        rotate: 0,
+        opacity: 1,
+        duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
+        ease: "circ.inOut",
+    }, 0.3);
+
+    // Tag animation
+    heroTl.fromTo(".hero-tag", {
+        yPercent: -100,
+        opacity: 0,
+    }, {
+        yPercent: 0,
+        opacity: 1,
+        duration: rv(0.8, 0.8, 0.8, 0.9, 0.9, 1),
+        ease: "circ.inOut",
+    }, 0.3);
+
+    // Subtitle animation
+    heroTl.fromTo(".hero-sub", {
+        yPercent: 300,
+        opacity: 0,
+    }, {
+        yPercent: 0,
+        opacity: 1,
+        duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
+        ease: "circ.inOut",
+    }, 0.3);
+
+    // Header animation
+    heroTl.fromTo(".site-header", {
+        yPercent: -100,
+        opacity: 0,
+    }, {
+        yPercent: 0,
+        opacity: 1,
+        duration: rv(0.8, 0.8, 0.8, 0.9, 0.9, 1),
+        ease: "circ.inOut",
+    }, 1.5);
+
+    // Buttons animation
+    heroTl.fromTo(".hero .btn-primary",
+        {
+            xPercent: -100,
             opacity: 0,
-        }, {
-            yPercent: 0,
+        },
+        {
+            xPercent: 0,
             opacity: 1,
-            duration: rv(null, null, null, null, 1.8, 2),
+            duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
             ease: "circ.inOut",
-        }, 0.3);
+        },
+        0
+    );
 
-        heroTl.fromTo(".site-header", {
-            yPercent: -100,
+    heroTl.fromTo(".hero .btn-outline",
+        {
+            xPercent: 100,
             opacity: 0,
-        }, {
-            yPercent: 0,
+        },
+        {
+            xPercent: 0,
             opacity: 1,
-            duration: 1,
-        }, 1.5);
+            duration: rv(1.2, 1.2, 1.5, 1.8, 1.8, 2),
+            ease: "circ.inOut",
+        },
+        0
+    );
 
-        heroTl.fromTo(".hero .btn-primary",
-            {
-                xPercent: -100,
-                opacity: 0,
-            },
-            {
-                xPercent: 0,
-                opacity: 1,
-                duration: rv(null, null, null, null, 1.8, 2),
-                ease: "circ.inOut",
-            },
-            0
-        );
-
-        heroTl.fromTo(".hero .btn-outline",
-            {
-                xPercent: 100,
-                opacity: 0,
-            },
-            {
-                xPercent: 0,
-                opacity: 1,
-                duration: rv(null, null, null, null, 1.8, 2),
-                ease: "circ.inOut",
-            },
-            0
-        );
-    }
-
-    // Hero sticky scroll animation - only on desktop
+    // Hero sticky scroll animation - only on desktop (keep as is)
     if (!isMobile() && !isTablet()) {
         const stickHeroTl = gsap.timeline({
             scrollTrigger: {
@@ -282,7 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 0.5);
     }
 
-    // Hero gallery animations - adjusted for mobile
+    // Hero gallery animations
     const galleryTl = gsap.timeline({
         scrollTrigger: {
             trigger: ".hero-gallery",
@@ -296,7 +274,7 @@ document.addEventListener("DOMContentLoaded", () => {
         opacity: rv(0.15, 0.15, 0.15, 0.18, 0.2, 0.2),
     }, 0);
 
-    // Gallery items animation - adjusted values for mobile
+    // Gallery items animation
     const galleryItems = [".hero-gallery-item-1", ".hero-gallery-item-2", ".hero-gallery-item-3"];
     galleryItems.forEach((item, index) => {
         galleryTl.fromTo(item, {
@@ -310,7 +288,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, index * 0.1);
     });
 
-    // Services Section Animation
+    // Services Section Animation (keep as is)
     const servicesTl = gsap.timeline({
         scrollTrigger: {
             trigger: "#services", 
@@ -338,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: rv(1.2, 1.2, 1.5, 1.8, 2, 2),
     }, 0);
 
-    // Animate service cards with responsive values
+    // Animate service cards with responsive values (keep as is)
     if (isMobile() || isTablet()) {
         // Mobile/tablet: simpler animation
         const serviceCards = document.querySelectorAll(".service-card");
@@ -424,7 +402,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 0);
     }
 
-    // Animate logo movement on scroll - responsive
+    // Animate logo movement on scroll - responsive (keep as is)
     if (!isMobile() && !isTablet()) {
         gsap.to(".animating-logo", {
             x: -150,
@@ -451,7 +429,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Stats Items Animation
+    // Stats Items Animation (keep as is)
     gsap.fromTo(".stat-item", {
         yPercent: rv(20, 20, 30, 40, 50, 50),
         opacity: 0,
@@ -468,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Portfolio Section
+    // Portfolio Section (keep as is)
     gsap.fromTo(".proven-section .section-title", {
         xPercent: rv(0, 0, -30, -40, -50, -50),
         opacity: 0,
@@ -499,7 +477,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Portfolio Grid Items - responsive animations
+    // Portfolio Grid Items - responsive animations (keep as is)
     const portfolioItems = document.querySelectorAll(".portfolio-grid .portfolio-item");
     if (isMobile() || isTablet()) {
         // Mobile/tablet: fade up animation
@@ -578,7 +556,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // View Portfolio Link
+    // View Portfolio Link (keep as is)
     gsap.fromTo(".proven-section .view-portfolio", {
         xPercent: rv(0, 0, 30, 40, 50, 50),
         opacity: rv(0, 0, 0, 0, 1, 1),
@@ -594,7 +572,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Client Logos
+    // Client Logos (keep as is)
     gsap.fromTo(".clients-bar .clients-inner .client-logo", {
         yPercent: rv(30, 30, 50, 100, 150, 150),
         opacity: 0,
@@ -611,7 +589,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // Site Footer
+    // Site Footer (keep as is)
     gsap.fromTo(".footer-wrapper", {
         yPercent: rv(15, 15, 20, 25, 30, 30),
         opacity: 0,
