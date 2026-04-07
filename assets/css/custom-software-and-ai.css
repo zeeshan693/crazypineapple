@@ -411,6 +411,7 @@
         transform: translate(-50%, -50%);
         width: 670px;
         height: 681.48px;
+        display: none;
     }
 
     .who-front-image {
@@ -540,6 +541,7 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 10px;
+    line-height: 1;
 }
 
 .contact-hero-content p {

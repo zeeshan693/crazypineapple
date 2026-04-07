@@ -507,21 +507,6 @@ body {
 
   /* Un-stack the absolute service titles for mobile
      (show all as a vertical list since GSAP snap is disabled) */
-  .service-titles,
-  .service-descs {
-    position: static;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-  }
-  .service-title,
-  .service-desc {
-    position: static !important;
-    opacity: 1 !important;
-    transform: none !important;
-    width: 100%;
-  }
   .service-title {
     font-size: clamp(22px, 7vw, 34px);
     letter-spacing: -1px;
@@ -539,18 +524,6 @@ body {
   }
 
   /* Show only the first image on mobile (others hidden by GSAP, override) */
-  .service-image-2,
-  .service-image-3,
-  .service-image-4,
-  .service-image-5,
-  .service-image-6 {
-    display: none;
-  }
-  .service-image-1 {
-    opacity: 1 !important;
-    transform: none !important;
-    filter: none !important;
-  }
 
   .service-link {
     font-size: 0.82rem;
@@ -559,7 +532,6 @@ body {
   }
 
 }
-
 
 /* ──────────────────────────────────────────────────────────────
    430px — iPhone 14 Plus / 15 Plus  (fine-tune on base)
@@ -691,4 +663,24 @@ body {
   .service-title { font-size: clamp(0.8rem, 4.5vw, 3rem); letter-spacing: -1.5px; }
   .service-title span { font-size: clamp(0.8rem, 4.5vw, 2rem); }
   .service-desc { font-size: 0.8rem; }
+}
+
+/* Add to services.css */
+
+.service-links {
+    position: relative;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+/* All links are absolute (stacked), link-1 stays in flow */
+.service-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0; /* override the old margin */
+}
+
+.service-link-1 {
+    position: relative; /* keeps the container sized */
 }
